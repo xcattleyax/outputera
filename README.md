@@ -12,7 +12,7 @@
 | 実装予定の機能       |                                                    |
 | データベース設計      | [![Image from Gyazo](https://i.gyazo.com/c7eb28224fc3045d9197ce710004258d.png)](https://gyazo.com/c7eb28224fc3045d9197ce710004258d) |
 | 画像遷移図           |                                                   |
-| 開発環境             |                                                  |
+| 開発環境             | + フロントエンド : HTML,CSS / JavaScript  + バックエンド : Ruby(ver.) / Ruby on Rails(ver)  + インフラ : AWS (EC2/S3)  + テスト : RSpec  + テキストエディタ : Visual Studio Code  + タスク管理 : GitHubプロジェクトボード   |
 | ローカルでの動作方法  |                                                    |
 
 # テーブル設計
