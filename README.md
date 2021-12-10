@@ -7,9 +7,8 @@
 | 利用方法            | <dl> <dt>1.トップページからユーザー新規登録を行う。</dt> <dt>2.投稿ボタンから投稿するタイプを選択し、内容を投稿する。</dt> <dt>3.一覧ページなどより投稿を見て、コメントを行う。</dt> <dt>4.コメントに回答を行う。</dt></dl> |
 | アプリケーションを作成した背景 | 学習においてアウトプットが非常に重要であると考えており、そのような場を設けるということを思いついた。フィードバックを得ることでさらなる学習にも繋がり、フィードバックを行うことで学習に繋がるため、より良い学習環境の一つのパーツとしてこのアプリケーションを開発する。  |
 | 洗い出した用件       | https://docs.google.com/spreadsheets/d/1F229CpK8vNGGYh7pWm2QpF4gtitouMslGx8KKhv7smg/edit#gid=982722306  |
-| 実装した機能についての |                                                   |
-| 画像やGIF、その説明   |                                                   |
-| 実装予定の機能       |                                                    |
+| 実装した機能についての画像やGIF、その説明 |                                                   |
+| 実装予定の機能       | 検索機能の作成、友達登録、チーム作成機能などを考えている     |
 | データベース設計      | [![Image from Gyazo](https://i.gyazo.com/c7eb28224fc3045d9197ce710004258d.png)](https://gyazo.com/c7eb28224fc3045d9197ce710004258d)   |
 | 画像遷移図           | [![Image from Gyazo](https://i.gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d.png)](https://gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d)   |
 | 開発環境             | <dl><dt> ・フロントエンド : HTML,CSS / JavaScript </dt><dt> ・バックエンド : Ruby(ver.) / Ruby on Rails(ver) </dt><dt> ・インフラ : AWS (EC2/S3) </dt><dt> ・テスト : RSpec </dt><dt> ・テキストエディタ : Visual Studio Code </dt><dt> ・タスク管理 : GitHubプロジェクトボード </dt></dl> |
