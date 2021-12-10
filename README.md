@@ -10,8 +10,8 @@
 | 実装した機能についての |                                                   |
 | 画像やGIF、その説明   |                                                   |
 | 実装予定の機能       |                                                    |
-| データベース設計      | [![Image from Gyazo](https://i.gyazo.com/c7eb28224fc3045d9197ce710004258d.png)](https://gyazo.com/c7eb28224fc3045d9197ce710004258d) |
-| 画像遷移図           |                                                   |
+| データベース設計      | [![Image from Gyazo](https://i.gyazo.com/c7eb28224fc3045d9197ce710004258d.png)](https://gyazo.com/c7eb28224fc3045d9197ce710004258d)   |
+| 画像遷移図           | [![Image from Gyazo](https://i.gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d.png)](https://gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d)   |
 | 開発環境             | <dl><dt> ・フロントエンド : HTML,CSS / JavaScript </dt><dt> ・バックエンド : Ruby(ver.) / Ruby on Rails(ver) </dt><dt> ・インフラ : AWS (EC2/S3) </dt><dt> ・テスト : RSpec </dt><dt> ・テキストエディタ : Visual Studio Code </dt><dt> ・タスク管理 : GitHubプロジェクトボード </dt></dl> |
 | ローカルでの動作方法  |                                                    |
 
