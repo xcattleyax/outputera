@@ -8,6 +8,7 @@
   height: 100vh;
 }
 
+/* サイドヘッダー */
 .side-top{
   height: 80px;
   border: 2px solid black;
@@ -19,7 +20,7 @@
 .app-name-frame{
   text-align: center;
   padding: 5px;
-  border: 2px solid red;
+  border: 2px solid black;
 }
 .app-name{
   font-size: 24px;
@@ -27,6 +28,7 @@
   text-decoration: none;
 }
 
+/* サイドボトム */
 .side-bottom{
   height: calc(100vh - 80px);
   border: 2px solid black;
@@ -39,16 +41,28 @@
   border: 1px solid black;
 }
 
-.form{
-  margin: 10px;
+.diary-form{
+  font-size: 18px;
+  width: 140px;
+  margin: 0 auto;
+  margin-top: 5px;
   text-align: center;
 }
-.time{
-  width: 100px;
+
+.diary-time{
+  font-size: 14px;
+  width: 140px;
 }
 
-.category-box{
-  width: 100px;
+.diary-category{
+  font-size: 14px;
+  width: 140px;
+  padding: 5px;
+}
+
+.submit-button{
+  margin: 10px;
+  width: 50px;
 }
 
 /* メインスペース */
