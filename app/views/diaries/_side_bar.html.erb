@@ -4,4 +4,21 @@
   </div>
 </div>
 <div class="side-bottom">
+  <div class="diary-box">
+     <p>日記</p>
+    <div class="daiary-time">
+      <form class="form">
+      <%# <%= form_with local: true do |f|%>
+        <p>時間</p>
+        <input type="text" class="time">
+        <%# <%= f.input text_field  %>
+        <p>カテゴリ</p>
+        <input type="text" class="category-box">
+        <%# <%= f.input text_field  %> 
+        <input type="submit" value="送信">
+        <%# <%= f.submit'送信' %>
+      </form>
+      <%# <% end %>
+    </div>
+  </div>
 </div>

@@ -32,9 +32,27 @@
   border: 2px solid black;
 }
 
+.diary-box{
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid black;
+}
+
+.form{
+  margin: 10px;
+  text-align: center;
+}
+.time{
+  width: 100px;
+}
+
+.category-box{
+  width: 100px;
+}
+
 /* メインスペース */
 .main-space{
-  /* background-color: blue; */
   width: calc(100vw - 200px);
   height: 100vh;
 }
