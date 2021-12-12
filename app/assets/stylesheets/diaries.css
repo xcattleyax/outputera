@@ -51,12 +51,14 @@
 .diary-time{
   font-size: 14px;
   width: 140px;
+  border: 1px solid black;
 }
 
 .diary-category{
   font-size: 14px;
   width: 140px;
   padding: 5px;
+  border: 1px solid black;
 }
 
 .submit-button{
