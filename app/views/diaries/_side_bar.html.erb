@@ -1,0 +1,19 @@
+<div class="side-top">
+  <div class="app-name-frame">
+    <%= link_to "OutPuter-A", root_path, class: "app-name" %>
+  </div>
+</div>
+<div class="side-bottom">
+  <div class="diary-box">
+    <p>日記</p>
+      <%= form_with model: @diary, local: true do |f| %>
+        <div class="diary-form">
+          <p>時間</p>
+          <%= f.text_field :time, class:"diary-time" %>
+          <p>カテゴリー</p>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
+          <%= f.submit '送信', class:"submit-button" %>
+        </div>
+      <% end %>
+  </div>
+</div>

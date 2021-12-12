@@ -62,10 +62,11 @@
 
 ## diaries テーブル
 
-| Column      | Type    | Options     |
-| ----------- | ------- | ----------- |
-| time        | integer | null: false |
-| category_id | integer | null: false |
+| Column      | Type    | Options                           |
+| ----------- | ------- | --------------------------------- |
+| time        | integer | null: false                       |
+| category_id | integer | null: false                       |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 
