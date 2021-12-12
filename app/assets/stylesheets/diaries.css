@@ -1,0 +1,50 @@
+.wrapper{
+  display: flex;
+}
+
+/* サイドバー */
+.side-bar{
+  width: 200px;
+  height: 100vh;
+}
+
+.side-top{
+  height: 80px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-name-frame{
+  text-align: center;
+  padding: 5px;
+  border: 2px solid red;
+}
+.app-name{
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+.side-bottom{
+  height: calc(100vh - 80px);
+  border: 2px solid black;
+}
+
+/* メインスペース */
+.main-space{
+  /* background-color: blue; */
+  width: calc(100vw - 200px);
+  height: 100vh;
+}
+
+.main-top{
+  height: 80px;
+  border: 2px solid black;
+}
+
+.main-bottom{
+  height: calc(100vh - 80px);
+  border: 2px solid black;
+}
