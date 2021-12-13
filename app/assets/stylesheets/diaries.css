@@ -80,19 +80,19 @@
 }
 
 .user-name{
-  font-size: 20px;
+  font-size: 24px;
   padding: 20px;
-  width: calc(100vw - 200px);
+  width: calc(100vw - 250px);
 }
 
 .login-box{
-  width: 100px;
+  width: 125px;
   display: flex;
   align-items: center;
 }
 
 .registrations-box{
-  width: 100px;
+  width: 125px;
   display: flex;
   align-items: center;
 }
