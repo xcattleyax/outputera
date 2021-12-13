@@ -37,7 +37,7 @@
 - has_many :presentation_comments
 - has_many :presentation_answers
 
-## categories テーブル
+## trend テーブル
 
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
@@ -49,7 +49,7 @@
 - has_many :user_categories
 - has_many :users, through: :user_categories
 
-## user_categories テーブル
+## user_trends テーブル
 
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
