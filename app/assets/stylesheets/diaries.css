@@ -64,6 +64,7 @@
 .submit-button{
   margin: 10px;
   width: 50px;
+  border: 1px solid black;
 }
 
 /* メインスペース */
@@ -72,11 +73,32 @@
   height: 100vh;
 }
 
+/* メインヘッダー */
 .main-top{
   height: 80px;
   border: 2px solid black;
+  display: flex;
 }
 
+.user-name{
+  font-size: 24px;
+  padding: 20px;
+  width: calc(100vw - 250px);
+}
+
+.login-box{
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+.registrations-box{
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+/* メインボトム */
 .main-bottom{
   height: calc(100vh - 80px);
   border: 2px solid black;
