@@ -1,6 +1,8 @@
 <div class="main-top">
   <div class="user-name">
-    ユーザー名
+    <% if user_signed_in? %>
+      <%= current_user.name %>
+    <% end %>
   </div>
   <div class="login-box">
     <%= link_to "ログイン", new_user_session_path %>
