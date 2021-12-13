@@ -1,15 +1,11 @@
-.wrapper{
+/* ヘッダー */
+.header{
   display: flex;
-}
-
-/* サイドバー */
-.side-bar{
-  width: 200px;
-  height: 100vh;
 }
 
 /* サイドヘッダー */
 .side-top{
+  width: 200px;
   height: 80px;
   border: 2px solid black;
   display: flex;
@@ -28,9 +24,42 @@
   text-decoration: none;
 }
 
+/* メインヘッダー */
+.main-top{
+  height: 80px;
+  width: calc(100vw - 200px);
+  border: 2px solid black;
+  display: flex;
+}
+
+.user-name{
+  font-size: 24px;
+  padding: 20px;
+  width: calc(100vw - 250px);
+}
+
+.login-box{
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+.registrations-box{
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+
+/* ボトム */
+.wrapper{
+  display: flex;
+}
+
 /* サイドボトム */
 .side-bottom{
   height: calc(100vh - 80px);
+  width: 200px;
   border: 2px solid black;
 }
 
@@ -67,39 +96,9 @@
   border: 1px solid black;
 }
 
-/* メインスペース */
-.main-space{
-  width: calc(100vw - 200px);
-  height: 100vh;
-}
-
-/* メインヘッダー */
-.main-top{
-  height: 80px;
-  border: 2px solid black;
-  display: flex;
-}
-
-.user-name{
-  font-size: 24px;
-  padding: 20px;
-  width: calc(100vw - 250px);
-}
-
-.login-box{
-  width: 125px;
-  display: flex;
-  align-items: center;
-}
-
-.registrations-box{
-  width: 125px;
-  display: flex;
-  align-items: center;
-}
-
 /* メインボトム */
 .main-bottom{
   height: calc(100vh - 80px);
+  width: calc(100vw - 200px);
   border: 2px solid black;
 }
