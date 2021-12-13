@@ -37,10 +37,10 @@
 
 ## trends テーブル
 
-| Column        | Type       | Options           |
-| ------------- | ---------- | ----------------- |
-| category_id   | integer    |                   |
-| user          | references | foreign_key: true |
+| Column        | Type       | Options                        |
+| ------------- | ---------- | ------------------------------ |
+| category_id   | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 
