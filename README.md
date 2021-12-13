@@ -23,11 +23,11 @@
 | name               | string     | null: false       |
 | email              | string     | null: false       |
 | encrypted_password | string     | null: false       |
-| user_category      | references | foreign_key: true |
+| user_trend      | references | foreign_key: true |
 
 ### Association
 
-- has_many :user_categories
+- has_many :user_trends
 - has_many :categories, through: :user_categories
 - has_many :diaries
 - has_many :notes
@@ -37,16 +37,16 @@
 - has_many :presentation_comments
 - has_many :presentation_answers
 
-## trend テーブル
+## trends テーブル
 
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
 | category_id   | integer    |                   |
-| user_category | references | foreign_key: true |
+| user_trend | references | foreign_key: true |
 
 ### Association
 
-- has_many :user_categories
+- has_many :user_trends
 - has_many :users, through: :user_categories
 
 ## user_trends テーブル
@@ -54,10 +54,10 @@
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
 | user     | references | null: false, foreign_key: true |
-| category | references | null: false, foreign_key: true |
+| trend    | references | null: false, foreign_key: true |
 
 - belongs_to :user
-- belongs_to :category
+- belongs_to :trend
 
 
 ## diaries テーブル
