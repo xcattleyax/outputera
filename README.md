@@ -9,7 +9,7 @@
 | 洗い出した用件       | https://docs.google.com/spreadsheets/d/1F229CpK8vNGGYh7pWm2QpF4gtitouMslGx8KKhv7smg/edit#gid=982722306  |
 | 実装した機能についての画像やGIF、その説明 |                                                   |
 | 実装予定の機能       | 検索機能の作成、友達登録、チーム作成機能などを考えている     |
-| データベース設計      | [![Image from Gyazo](https://i.gyazo.com/c7eb28224fc3045d9197ce710004258d.png)](https://gyazo.com/c7eb28224fc3045d9197ce710004258d)   |
+| データベース設計      | [![Image from Gyazo](https://i.gyazo.com/7dbd6a4c62d018a85f6acc968cbee2ce.png)](https://gyazo.com/7dbd6a4c62d018a85f6acc968cbee2ce)  |
 | 画像遷移図           | [![Image from Gyazo](https://i.gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d.png)](https://gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d)   |
 | 開発環境             | <dl><dt> ・フロントエンド : HTML,CSS / JavaScript </dt><dt> ・バックエンド : Ruby(ver.) / Ruby on Rails(ver) </dt><dt> ・インフラ : AWS (EC2/S3) </dt><dt> ・テスト : RSpec </dt><dt> ・テキストエディタ : Visual Studio Code </dt><dt> ・タスク管理 : GitHubプロジェクトボード </dt></dl> |
 | ローカルでの動作方法  |                                                    |
@@ -23,12 +23,10 @@
 | name               | string     | null: false       |
 | email              | string     | null: false       |
 | encrypted_password | string     | null: false       |
-| user_trend      | references | foreign_key: true |
 
 ### Association
 
-- has_many :user_trends
-- has_many :categories, through: :user_categories
+- has_many :trends
 - has_many :diaries
 - has_many :notes
 - has_many :note_comments
@@ -42,23 +40,11 @@
 | Column        | Type       | Options           |
 | ------------- | ---------- | ----------------- |
 | category_id   | integer    |                   |
-| user_trend | references | foreign_key: true |
+| user          | references | foreign_key: true |
 
 ### Association
 
-- has_many :user_trends
-- has_many :users, through: :user_categories
-
-## user_trends テーブル
-
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| user     | references | null: false, foreign_key: true |
-| trend    | references | null: false, foreign_key: true |
-
 - belongs_to :user
-- belongs_to :trend
-
 
 ## diaries テーブル
 
