@@ -1,7 +1,7 @@
 <div class="main-top">
   <div class="user-name">
     <% if user_signed_in? %>
-      <%= current_user.name %>
+      <%= link_to current_user.name, user_path(current_user.id) %>
     <% end %>
   </div>
     <% if user_signed_in? %>
