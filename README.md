@@ -50,6 +50,7 @@
 
 | Column      | Type    | Options                           |
 | ----------- | ------- | --------------------------------- |
+| data        | data    | null: false                       |
 | time        | integer | null: false                       |
 | category_id | integer | null: false                       |
 | user        | references | null: false, foreign_key: true |

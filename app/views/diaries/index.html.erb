@@ -2,10 +2,16 @@
   <%= render "header" %>
 </div>
 <div class="wrapper">
-  <div class="side-bar">
-    <%= render "side_bar" %>
-  </div>
-  <div class="main-space">
-    <%= render "main_space" %>
-  </div>
+  <% if user_signed_in? %>
+    <div class="diary-bar">
+      <%= render "diary_bar" %>
+    </div>
+  <% else %>
+    <div>
+      <%= render "side_bar" %>
+    </div>
+  <% end %>
+    <div class="main-space">
+      <%= render "main_space" %>
+    </div>
 </div>
