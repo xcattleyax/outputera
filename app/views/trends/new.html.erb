@@ -1,0 +1,8 @@
+<div class="header">
+  <%= render "diaries/header" %>
+</div>
+カテゴリー
+<%= form_with model: @trend, local: true do |f| %>
+  <%= f.collection_select(:category_id, Category.where.not(id: @trends), :id, :name, {}, {class:"diary-category"}) %>
+    <%= f.submit '決定' %>
+<% end %>

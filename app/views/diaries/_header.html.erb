@@ -8,22 +8,22 @@
 <div class="main-top">
   <div class="user-name">
     <% if user_signed_in? %>
-      <%= link_to current_user.name, user_path(current_user.id) %>
+      <%= link_to current_user.name, trend_path(current_user.id) %>
     <% end %>
   </div>
-    <% if user_signed_in? %>
-      <div class="login-box">
-        <%= link_to "投稿", root_path %>
-      </div>
-      <div class="registrations-box">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </div>
-    <% else %>
-      <div class="login-box">
-        <%= link_to "ログイン", new_user_session_path %>
-      </div>
-      <div class="registrations-box">
-        <%= link_to "新規登録", new_user_registration_path %>
-      </div>
-    <% end %>
+  <% if user_signed_in? %>
+    <div class="login-box">
+      <%= link_to "投稿", root_path %>
+    </div>
+    <div class="registrations-box">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    </div>
+  <% else %>
+    <div class="login-box">
+      <%= link_to "ログイン", new_user_session_path %>
+    </div>
+    <div class="registrations-box">
+      <%= link_to "新規登録", new_user_registration_path %>
+    </div>
+  <% end %>
 </div>
