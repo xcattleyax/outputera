@@ -1,24 +1,2 @@
-<div class="main-top">
-  <div class="user-name">
-    <% if user_signed_in? %>
-      <%= current_user.name %>
-    <% end %>
-  </div>
-    <% if user_signed_in? %>
-      <div class="login-box">
-        <%= link_to "投稿", root_path %>
-      </div>
-      <div class="registrations-box">
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </div>
-    <% else %>
-      <div class="login-box">
-        <%= link_to "ログイン", new_user_session_path %>
-      </div>
-      <div class="registrations-box">
-        <%= link_to "新規登録", new_user_registration_path %>
-      </div>
-    <% end %>
-</div>
 <div class="main-bottom">
 </div>

@@ -1,0 +1,15 @@
+.trend-info{
+  font-size: 20px;
+  padding: 10px;
+}
+
+.name-content{
+  margin-bottom: 10px;
+}
+
+.category-box{
+  font-size: 20px;
+  width: 150px;
+  border: 1px solid black;
+  margin-bottom: 5px;
+}
