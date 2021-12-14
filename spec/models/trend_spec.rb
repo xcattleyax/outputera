@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Trend, type: :model do
-
   before do
     user = FactoryBot.build(:user)
     user.save
@@ -22,9 +21,9 @@ RSpec.describe Trend, type: :model do
         expect(@trend.errors.full_messages).to include("Category can't be blank")
       end
       it 'user_idが取得できていない' do
-        @trend.user_id = ""
+        @trend.user_id = ''
         @trend.valid?
-        expect(@trend.errors.full_messages).to include("User must exist")
+        expect(@trend.errors.full_messages).to include('User must exist')
       end
     end
   end

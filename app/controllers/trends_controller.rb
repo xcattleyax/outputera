@@ -1,5 +1,4 @@
 class TrendsController < ApplicationController
-
   before_action :set_user, only: [:show, :edit]
 
   def show
@@ -40,5 +39,4 @@ class TrendsController < ApplicationController
   def trend_params
     params.require(:trend).permit(:category_id).merge(user_id: current_user.id)
   end
-
 end

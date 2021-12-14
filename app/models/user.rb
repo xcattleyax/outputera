@@ -7,5 +7,4 @@ class User < ApplicationRecord
   has_many :trends
 
   validates :name, presence: true
-  
 end
