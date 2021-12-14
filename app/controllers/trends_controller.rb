@@ -1,8 +1,8 @@
 class TrendsController < ApplicationController
 
+  before_action :set_user, only: [:show, :edit]
+
   def show
-    @user = User.find(params[:id])
-    @trends = @user.trends
   end
 
   def new
@@ -21,8 +21,6 @@ class TrendsController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
-    @trends = @user.trends
     @trend_categories = @trends.pluck(:category_id)
   end
 
@@ -33,6 +31,12 @@ class TrendsController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = User.find(params[:id])
+    @trends = @user.trends
+  end
+
   def trend_params
     params.require(:trend).permit(:category_id).merge(user_id: current_user.id)
   end
