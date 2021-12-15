@@ -1,0 +1,45 @@
+<div class="side-bottom">
+  <div class="diary-box">
+    <% if @diary_status == 'OK' %>
+      記録できる日記はありません。
+    <% elsif @diary_status != nil %>
+      <div class="diary-infomation">
+        <%= @diary_status %>
+        <P>を入力できます</P>
+      </div>
+        <p>日記</p>
+      <%= form_with model: @diary, local: true do |f| %>
+        <div class="diary-form">
+          <p>日付</p>
+          <div class="diary-select">
+            <%= f.select :date,[@diary_status,@diary_status] %>
+          </div>
+          <p>時間</p>
+          <div class="diary-select">
+            <%= f.select :time, options_for_select((1..24).to_a),include_blank: '勉強時間を選択' %>
+          </div>
+          <p>カテゴリー</p>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
+          <%= f.submit '送信', class:"submit-button" %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>日記</p>
+      <%= form_with model: @diary, local: true do |f| %>
+        <div class="diary-form">
+          <p>日付</p>
+          <div class="diary-select">
+            <%= f.select :date,[[Date.today,Date.today],[(Date.today)-1,(Date.today)-1]] %>
+          </div>
+          <p>時間</p>
+          <div class="diary-select">
+            <%= f.select :time, options_for_select((1..24).to_a),include_blank: '勉強時間を選択' %>
+          </div>
+          <p>カテゴリー</p>
+          <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
+          <%= f.submit '送信', class:"submit-button" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

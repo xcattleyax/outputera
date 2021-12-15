@@ -2,6 +2,13 @@ class TrendsController < ApplicationController
   before_action :set_user, only: [:show, :edit]
 
   def show
+    @diaries = @user.diaries
+    if params[:trend].nil?
+      @trend = Trend.new
+    else
+      @trend = Trend.new(trend_params)
+      @diaries = @diaries.where(category_id: @trend.category_id) unless @trend.category_id == 1
+    end
   end
 
   def new

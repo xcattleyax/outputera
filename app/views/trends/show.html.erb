@@ -1,19 +1,12 @@
 <div class="header">
   <%= render "diaries/header" %>
 </div>
-<div class="trend-info">
-  <div class="name-content">
-    <p>名前</p>
-    <%= @user.name %>
+<div class="main-area-mypage">
+  <div class="side-user-info">
+    <%= render "side_bar" %>
   </div>
-  <p>カテゴリー</p>
-  <% if user_signed_in? && current_user.id == @user.id %>
-    <%= link_to '追加', new_trend_path %>
-    <%= link_to '削除', edit_trend_path(current_user.id) %>
-  <% end %>
-  <div>
-    <% @trends.each do |trend| %>
-      <p class="category-box"><%= trend.category.name %></p>
-    <% end %>
+  <div class="main-space-mine">
+    <%= render "main_space_menu" %>
+    <%= render "main_space_diary" %>
   </div>
 </div>

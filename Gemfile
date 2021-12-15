@@ -59,3 +59,4 @@ gem 'pry-rails'
 gem 'active_hash'
 gem 'rubocop', require: false
 gem 'devise'
+gem 'simple_calendar', '~> 2.0'

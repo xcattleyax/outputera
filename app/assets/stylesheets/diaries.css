@@ -56,7 +56,7 @@
   display: flex;
 }
 
-/* サイドボトム */
+/* サイドボトム、ダイアリーバー */
 .side-bottom{
   height: calc(100vh - 80px);
   width: 200px;
@@ -70,6 +70,11 @@
   border: 1px solid black;
 }
 
+.diary-infomation{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .diary-form{
   font-size: 18px;
   width: 140px;
@@ -77,14 +82,16 @@
   text-align: center;
 }
 
-.diary-time{
-  font-size: 14px;
-  width: 140px;
+.diary-select{
+  font-size: 16px;
+  width: 120px;
+  padding: 2px;
   border: 1px solid black;
+  margin-left: 10px;
 }
 
 .diary-category{
-  font-size: 14px;
+  font-size: 16px;
   width: 140px;
   padding: 5px;
   border: 1px solid black;
