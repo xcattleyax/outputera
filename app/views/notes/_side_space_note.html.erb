@@ -1,5 +1,5 @@
 <div class="content-menu">
-  <%= form_with url: new_note_path, local: true do |f| %>
+  <%= form_with url: new_note_path, method: :get, local: true do |f| %>
     <%= f.submit "ノート" %>
   <% end %>
 </div>
