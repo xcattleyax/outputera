@@ -2,6 +2,7 @@ class TrendsController < ApplicationController
   before_action :set_user, only: [:show, :edit]
 
   def show
+    @diaries = @user.diaries
   end
 
   def new

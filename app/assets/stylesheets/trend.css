@@ -29,3 +29,8 @@
   width: calc(100vw - 200px);
   border: 2px solid black;
 }
+
+.diary-time-index{
+  color: red;
+  text-align: center;
+}

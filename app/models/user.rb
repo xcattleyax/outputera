@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :trends
+  has_many :diaries
 
   validates :name, presence: true
 end
