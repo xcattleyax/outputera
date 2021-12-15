@@ -5,7 +5,7 @@ class Note < ApplicationRecord
 
   with_options presence: true do
     validates :title
-    validates :text
+    validates :text, length: { maximum: 1000 }
     validates :category_id
   end
 end
