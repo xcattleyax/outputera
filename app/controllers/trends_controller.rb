@@ -3,13 +3,11 @@ class TrendsController < ApplicationController
 
   def show
     @diaries = @user.diaries
-    if params[:trend] == nil
+    if params[:trend].nil?
       @trend = Trend.new
     else
       @trend = Trend.new(trend_params)
-      unless @trend.category_id == 1
-        @diaries = @diaries.where(category_id: @trend.category_id)
-      end
+      @diaries = @diaries.where(category_id: @trend.category_id) unless @trend.category_id == 1
     end
   end
 
