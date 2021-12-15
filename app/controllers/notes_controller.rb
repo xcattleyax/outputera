@@ -1,5 +1,4 @@
 class NotesController < ApplicationController
-
   def index
   end
 
@@ -17,6 +16,7 @@ class NotesController < ApplicationController
   end
 
   private
+
   def note_params
     params.require(:note).permit(:title, :text, :category_id).merge(user_id: current_user.id)
   end
