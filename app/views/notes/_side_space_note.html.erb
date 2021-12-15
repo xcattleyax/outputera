@@ -1,0 +1,16 @@
+<div class="content-menu">
+  <%= form_with url: new_note_path, local: true do |f| %>
+    <%= f.submit "ノート" %>
+  <% end %>
+</div>
+<div class="content-menu">
+  <%= form_with url: "#", local: true do |f| %>
+    <%= f.submit "新規プレゼン" %>
+  <% end %>
+</div>
+<div class="content-menu">
+  <%= form_with url: "#", local: true do |f| %>
+    <%= f.submit "編集プレゼン" %>
+  <% end %>
+</div>
+
