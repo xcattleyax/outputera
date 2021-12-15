@@ -6,6 +6,6 @@ class Note < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :text, length: { maximum: 1000 }
-    validates :category_id
   end
+  validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
 end
