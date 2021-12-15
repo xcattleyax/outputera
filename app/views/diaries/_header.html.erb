@@ -13,7 +13,7 @@
   </div>
   <% if user_signed_in? %>
     <div class="login-box">
-      <%= link_to "投稿", root_path %>
+      <%= link_to "投稿", notes_path %>
     </div>
     <div class="registrations-box">
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>

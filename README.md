@@ -50,7 +50,7 @@
 
 | Column      | Type    | Options                           |
 | ----------- | ------- | --------------------------------- |
-| data        | data    | null: false                       |
+| date        | date    | null: false                       |
 | time        | integer | null: false                       |
 | category_id | integer | null: false                       |
 | user        | references | null: false, foreign_key: true |
@@ -63,7 +63,7 @@
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| title       | string     |                                |
+| title       | string     | null: false                    |
 | text        | text       | null: false                    |
 | category_id | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |

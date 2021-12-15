@@ -14,6 +14,7 @@ class DiariesController < ApplicationController
                         'OK'
                       end
     end
+    @notes = Note.all
   end
 
   def create

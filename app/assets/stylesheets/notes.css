@@ -1,0 +1,46 @@
+.main-area-note{
+  display: flex
+}
+
+.main-area-side{
+  height: calc(100vh - 80px);
+  width: 200px;
+  border: 2px solid black;
+}
+
+.main-area-main{
+  height: calc(100vh - 80px);
+  width: calc(100vw - 200px);
+  border: 2px solid black;
+}
+
+.content-menu{
+  text-align: center;
+  border: 1px solid black;
+  margin: 20px;
+}
+/* ノート編集メインスペース */
+.note-new-head{
+  font-size: 28px;
+  text-align: center;
+}
+.note-form-box{
+  padding: 10px 20px 0 20px;
+}
+
+.post-title{
+  font-size: 16px;
+  height: 30px;
+  width: calc(100vw - 240px);
+  border: 1px solid black;
+}
+
+.post-text{
+  height: 50vh;
+  width: calc(100vw - 240px);
+  border: 1px solid black;
+}
+
+.note-form-button{
+  text-align: center;
+}

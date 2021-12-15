@@ -1,2 +1,9 @@
 <div class="main-bottom">
+  <p>pic up!</p>
+  <% @notes.each do |note| %>
+    <div class="note-selection">
+      <p>タイトル: <%= note.title%></p>
+      <p>カテゴリー: <%=note.category.name %></p>
+    </div>
+  <% end %>
 </div>
