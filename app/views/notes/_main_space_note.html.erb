@@ -1,5 +1,8 @@
 <div class="note-new-head">ノート</div>
 <%= form_with model: @note, local: true do |f| %>
+  <div class="note-form-box">カテゴリー
+  <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
+  </div>
   <div class="note-form-box">タイトル
   <%= f.text_field :title, class:"post-title" %>
   </div>
