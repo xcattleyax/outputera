@@ -26,8 +26,10 @@ ActiveRecord::Schema.define(version: 2021_12_15_032233) do
     t.string "title", null: false
     t.text "text", null: false
     t.integer "category_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "trends", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,5 +54,6 @@ ActiveRecord::Schema.define(version: 2021_12_15_032233) do
   end
 
   add_foreign_key "diaries", "users"
+  add_foreign_key "notes", "users"
   add_foreign_key "trends", "users"
 end
