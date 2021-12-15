@@ -1,3 +1,9 @@
+/* マイページ */
+.main-area-mypage{
+  display: flex;
+}
+
+/* サイドバー */
 .trend-info{
   font-size: 20px;
   padding: 10px;
@@ -14,10 +20,6 @@
   margin-bottom: 5px;
 }
 
-.main-area-mypage{
-  display: flex;
-}
-
 .side-user-info{
   height: calc(100vh - 80px);
   width: 200px;
@@ -28,6 +30,24 @@
   height: calc(100vh - 80px);
   width: calc(100vw - 200px);
   border: 2px solid black;
+}
+
+/* メインメニューバー */
+.menu-bar{
+  height: 30px;
+  
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-content{
+  padding: 0 20px;
+  border: 1px solid black;
+}
+
+/* メインスペース */
+.mypage-calendar-contents{
+  height: 100px;
 }
 
 .diary-time-index{

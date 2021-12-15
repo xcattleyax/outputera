@@ -1,9 +1,0 @@
-<%= month_calendar attribute: :date, events: @diaries do |date, diaries| %>
-  <%= date.day %>
-
-  <% diaries.each do |diary| %>
-    <div class="diary-time-index">
-      <%= diary.time %>
-    </div>
-  <% end %>
-<% end %>
