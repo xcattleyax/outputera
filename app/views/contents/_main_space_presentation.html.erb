@@ -1,0 +1,11 @@
+<%= form_with model: @content, local: true do |f| %>
+  <div class="note-form-box">ページタイトル
+  <%= f.text_field :title, class:"post-title" %>
+  </div>
+  <div class="note-form-box">本文(1000字以内)
+  <%= f.text_area :text, class:"post-text"%>
+  </div>
+  <div class="note-form-button">
+  <%= f.submit "次ページ", class:"button" %>
+  </div>
+<% end %>

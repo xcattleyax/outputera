@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_062052) do
   end
 
   create_table "presentation_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "page", null: false
     t.string "content", null: false
     t.text "text", null: false
     t.bigint "presentation_id", null: false
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_12_15_062052) do
   create_table "presentations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
     t.integer "category_id", null: false
+    t.integer "detail_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
