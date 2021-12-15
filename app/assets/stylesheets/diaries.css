@@ -107,5 +107,11 @@
 .main-bottom{
   height: calc(100vh - 80px);
   width: calc(100vw - 200px);
+  padding: 10px;
   border: 2px solid black;
+}
+
+.note-selection{
+  border: 1px solid black;
+  margin: 5px;
 }
