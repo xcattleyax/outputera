@@ -12,4 +12,8 @@
   <% end %>
 </div>
 
-公開 
+<div class="output-box">
+  <h3>※注意</h3>
+  <p>公開後は、編集ができません。</p>
+  <%= link_to "公開", presentation_path(id: @presentation.id), method: :patch, class:"output-button" %>
+</div>
