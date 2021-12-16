@@ -1,4 +1,4 @@
-<%= form_with model: @content, local: true do |f| %>
+<%= form_with model: [@presentation, @content], local: true do |f| %>
   <p>ページ -<%= @page %>-</p>
   <%= f.hidden_field :page, value: @page %>
   <div class="note-form-box">ページタイトル
@@ -8,6 +8,6 @@
   <%= f.text_area :text, class:"post-text"%>
   </div>
   <div class="note-form-button">
-  <%= f.submit "次ページ", class:"button" %>
+  <%= f.submit "保存/新規ページ", class:"button" %>
   </div>
 <% end %>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :diaries, only:[:create]
   resources :trends, except:[:index, :update]
   resources :notes, only:[:index, :new, :create]
-  resources :presentations, only:[:new, :create] do
-    resources :contents, only:[:new, :create]
+  resources :presentations, only:[:index, :new, :create, :update] do
+    resources :contents, only:[:new, :create, :edit, :update]
   end
 end

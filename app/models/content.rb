@@ -1,4 +1,4 @@
-class PresentationContent < ApplicationRecord
+class Content < ApplicationRecord
   belongs_to :presentation
 
   with_options presence: true do

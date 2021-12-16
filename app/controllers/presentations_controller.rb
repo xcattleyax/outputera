@@ -1,4 +1,9 @@
 class PresentationsController < ApplicationController
+  def index
+    @user = User.find(current_user.id)
+    @presentations = @user.presentations
+  end
+
   def new
     @presentation = Presentation.new
   end
@@ -10,6 +15,12 @@ class PresentationsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def update
+    presentation = Presentation.find(params[:id])
+    presentation.update(detail_id: 2)
+    redirect_to root_path
   end
 
   private

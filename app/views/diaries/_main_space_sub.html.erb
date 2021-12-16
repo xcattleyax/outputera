@@ -1,0 +1,9 @@
+<div class="main-bottom-sub">
+  <p>pick up! [プレゼン]</p>
+  <% @presentations.each do |presentation| %>
+    <div class="note-selection">
+      <p>タイトル: <%= presentation.title %></p>
+      <p>カテゴリー: <%= presentation.category.name %></p>
+    </div>
+  <% end %>
+</div>

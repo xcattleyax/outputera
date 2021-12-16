@@ -113,11 +113,11 @@
 ### Association
 
 - belongs_to :user
-- has_many :presentation_contents
+- has_many :contents
 - has_many :presentation_comments
 - has_many :presentation_answers
 
-## presentation_contents テーブル
+## contents テーブル
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
@@ -143,7 +143,7 @@
 - belongs_to :user
 - belongs_to :presentation
 
-## presentation_comments テーブル
+## presentation_answers テーブル
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |

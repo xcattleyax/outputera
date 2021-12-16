@@ -3,11 +3,17 @@
   <h2>目次</h2>
 </div>
 <div class="content-box">
-  <% @contents.each do |content| %>
-    <div>
-      <%= content.page %>:<%= content.content %>
-    </div>
+  <% unless @contents == nil%>
+    <% @contents.each do |content| %>
+      <div>
+        <%= link_to " #{content.page} :#{content.content }", edit_presentation_content_path(id: content.presentation_id, page: content.page) %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
-公開 
+<div class="output-box">
+  <h3>※注意</h3>
+  <p>公開後は、編集ができません。</p>
+  <%= link_to "公開", presentation_path(id: @presentation.id), method: :patch, class:"output-button" %>
+</div>

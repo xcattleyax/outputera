@@ -5,3 +5,12 @@
   border: 1px solid black;
   overflow: scroll
 }
+
+.output-box{
+  padding: 10px;
+}
+
+.output-button{
+  padding: 5px;
+  border: 1px solid blue;
+}
