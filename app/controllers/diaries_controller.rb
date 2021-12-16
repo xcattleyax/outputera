@@ -15,6 +15,7 @@ class DiariesController < ApplicationController
                       end
     end
     @notes = Note.all
+    @presentations = Presentation.where(detail_id: 2)
   end
 
   def create
