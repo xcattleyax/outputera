@@ -6,5 +6,4 @@ class Content < ApplicationRecord
     validates :content
     validates :text, length: { maximum: 1000 }
   end
-
 end

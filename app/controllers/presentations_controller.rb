@@ -1,10 +1,9 @@
 class PresentationsController < ApplicationController
-
   def index
     @user = User.find(current_user.id)
     @presentations = @user.presentations
   end
-  
+
   def new
     @presentation = Presentation.new
   end
@@ -29,5 +28,4 @@ class PresentationsController < ApplicationController
   def presentation_params
     params.require(:presentation).permit(:title, :category_id).merge(user_id: current_user.id, detail_id: 1)
   end
-
 end

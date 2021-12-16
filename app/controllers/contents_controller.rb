@@ -34,10 +34,9 @@ class ContentsController < ApplicationController
     redirect_to new_presentation_content_path(content.presentation_id)
   end
 
-    private
+  private
 
   def content_params
     params.require(:content).permit(:page, :content, :text).merge(presentation_id: params[:presentation_id])
   end
-
 end
