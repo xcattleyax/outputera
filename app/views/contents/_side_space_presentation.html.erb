@@ -1,11 +1,13 @@
-<h2>プレゼン</h2>
-<%= form_with model: @presentation, local: true do |f| %>
-  <div class="note-form-box">カテゴリー
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
-    <%= f.submit "保存", class:"button" %>
-    <%= f.submit "完成", class:"button" %>
-  </div>
-<% end %>
 <div class="header">
-  <%= render "content_space" %>
+
+  <h2>目次</h2>
 </div>
+<div class="content-box">
+  <% @contents.each do |content| %>
+    <div>
+      <%= content.page %>:<%= content.content %>
+    </div>
+  <% end %>
+</div>
+
+公開 

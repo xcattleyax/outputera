@@ -1,6 +1,8 @@
 <%= form_with model: @content, local: true do |f| %>
+  <p>ページ -<%= @page %>-</p>
+  <%= f.hidden_field :page, value: @page %>
   <div class="note-form-box">ページタイトル
-  <%= f.text_field :title, class:"post-title" %>
+  <%= f.text_field :content, class:"post-title" %>
   </div>
   <div class="note-form-box">本文(1000字以内)
   <%= f.text_area :text, class:"post-text"%>
