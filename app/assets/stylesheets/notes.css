@@ -44,3 +44,44 @@
 .note-form-button{
   text-align: center;
 }
+
+/* ノート詳細ページ */
+.show-box{
+  padding: 10px;
+}
+
+.show-note{
+  font-size: 18px;
+  text-align: center;
+  height: calc(100vh - 240px);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.show-title{
+  font-size: 30px;
+}
+
+.show-category{
+  font-size: 24px;
+}
+
+.show-text{
+  border: 1px solid black;
+  height: calc(100vh / 2);
+  text-align: left;
+  overflow: scroll;
+}
+
+.comment-box{
+  height: 100px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.comment-form{
+  height: 40px;
+  width: calc(100vw - 300px);
+  border: 1px solid black;
+}
