@@ -6,7 +6,7 @@
   <% unless @contents == nil%>
     <% @contents.each do |content| %>
       <div>
-        <%= link_to " #{content.page} :#{content.content }", edit_presentation_content_path(id: @presentation.id, page: content.page) %>
+        <%= link_to " #{content.page} :#{content.content }", edit_presentation_content_path(id: content.presentation_id, page: content.page) %>
       </div>
     <% end %>
   <% end %>

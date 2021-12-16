@@ -1,0 +1,9 @@
+<div class="content-box">
+  <% unless @presentations == nil %>
+    <% @presentations.each do |presentation| %>
+      <div>
+        <%= link_to "#{presentation.title}", new_presentation_content_path(presentation_id: presentation.id) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

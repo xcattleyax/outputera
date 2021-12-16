@@ -1,4 +1,10 @@
 class PresentationsController < ApplicationController
+
+  def index
+    @user = User.find(current_user.id)
+    @presentations = @user.presentations
+  end
+  
   def new
     @presentation = Presentation.new
   end
