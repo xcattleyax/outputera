@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_062052) do
+ActiveRecord::Schema.define(version: 2021_12_16_052949) do
+
+  create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "page", null: false
+    t.string "content", null: false
+    t.text "text", null: false
+    t.bigint "presentation_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["presentation_id"], name: "index_contents_on_presentation_id"
+  end
 
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "date", null: false
@@ -30,16 +40,6 @@ ActiveRecord::Schema.define(version: 2021_12_15_062052) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_notes_on_user_id"
-  end
-
-  create_table "presentation_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "page", null: false
-    t.string "content", null: false
-    t.text "text", null: false
-    t.bigint "presentation_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["presentation_id"], name: "index_presentation_contents_on_presentation_id"
   end
 
   create_table "presentations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -73,9 +73,9 @@ ActiveRecord::Schema.define(version: 2021_12_15_062052) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contents", "presentations"
   add_foreign_key "diaries", "users"
   add_foreign_key "notes", "users"
-  add_foreign_key "presentation_contents", "presentations"
   add_foreign_key "presentations", "users"
   add_foreign_key "trends", "users"
 end

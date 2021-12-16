@@ -1,6 +1,6 @@
-class CreatePresentationContents < ActiveRecord::Migration[6.0]
+class CreateContents < ActiveRecord::Migration[6.0]
   def change
-    create_table :presentation_contents do |t|
+    create_table :contents do |t|
       t.integer :page, null: false
       t.string :content, null: false
       t.text :text, null: false

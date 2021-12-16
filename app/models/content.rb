@@ -1,4 +1,4 @@
-class PresentationContent < ApplicationRecord
+class Content < ApplicationRecord
   belongs_to :presentation
 
   with_options presence: true do
@@ -6,4 +6,5 @@ class PresentationContent < ApplicationRecord
     validates :content
     validates :text, length: { maximum: 1000 }
   end
+
 end

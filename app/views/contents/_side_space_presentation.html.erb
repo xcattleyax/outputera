@@ -3,10 +3,12 @@
   <h2>目次</h2>
 </div>
 <div class="content-box">
-  <% @contents.each do |content| %>
-    <div>
-      <%= content.page %>:<%= content.content %>
-    </div>
+  <% unless @contents == nil%>
+    <% @contents.each do |content| %>
+      <div>
+        <%= link_to " #{content.page} :#{content.content }", edit_presentation_content_path(id: @presentation.id, page: content.page) %>
+      </div>
+    <% end %>
   <% end %>
 </div>
 
