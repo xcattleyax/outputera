@@ -1,5 +1,4 @@
 class PresentationsController < ApplicationController
-
   def new
     @presentation = Presentation.new
   end
@@ -14,9 +13,8 @@ class PresentationsController < ApplicationController
   end
 
   private
-  
+
   def presentation_params
     params.require(:presentation).permit(:title, :category_id).merge(user_id: current_user.id, detail_id: 1)
   end
-
 end
