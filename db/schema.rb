@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_052949) do
+ActiveRecord::Schema.define(version: 2021_12_16_093414) do
 
   create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "page", null: false
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2021_12_16_052949) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_diaries_on_user_id"
+  end
+
+  create_table "note_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "comment", null: false
+    t.bigint "user_id", null: false
+    t.bigint "note_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_note_comments_on_note_id"
+    t.index ["user_id"], name: "index_note_comments_on_user_id"
   end
 
   create_table "notes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -75,6 +85,8 @@ ActiveRecord::Schema.define(version: 2021_12_16_052949) do
 
   add_foreign_key "contents", "presentations"
   add_foreign_key "diaries", "users"
+  add_foreign_key "note_comments", "notes"
+  add_foreign_key "note_comments", "users"
   add_foreign_key "notes", "users"
   add_foreign_key "presentations", "users"
   add_foreign_key "trends", "users"

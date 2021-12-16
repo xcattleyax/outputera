@@ -2,6 +2,7 @@ class Note < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
   belongs_to :user
+  has_many :note_comments
 
   with_options presence: true do
     validates :title

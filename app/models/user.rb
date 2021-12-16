@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :diaries
   has_many :notes
   has_many :presentations
+  has_many :note_comments
 
   validates :name, presence: true
 end
