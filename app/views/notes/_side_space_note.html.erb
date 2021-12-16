@@ -1,16 +1,10 @@
 <div class="content-menu">
-  <%= form_with url: new_note_path, method: :get, local: true do |f| %>
-    <%= f.submit "ノート" %>
-  <% end %>
+  <%= link_to 'ノート', new_note_path %>
 </div>
 <div class="content-menu">
-  <%= form_with url: "#", local: true do |f| %>
-    <%= f.submit "新規プレゼン" %>
-  <% end %>
+  <%= link_to '新規プレゼン', new_presentation_path %>
 </div>
 <div class="content-menu">
-  <%= form_with url: "#", local: true do |f| %>
-    <%= f.submit "編集プレゼン" %>
-  <% end %>
+  <%= link_to '編集プレゼン', "#" %>
 </div>
 

@@ -107,6 +107,7 @@
 | ----------- | ---------- | ------------------------------ |
 | title       | string     | null: false                    |
 | category_id | integer    | null: false                    |
+| detail_id   | integer    | null: false                    |
 | user        | references | null: false, foreign_key: true |
 
 ### Association
@@ -120,6 +121,7 @@
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
+| page         | integer    | null: false                    |
 | content      | string     | null: false                    |
 | text         | text       | null: false                    |
 | presentation | references | null: false, foreign_key: true |

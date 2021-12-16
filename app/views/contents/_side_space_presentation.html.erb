@@ -1,0 +1,13 @@
+<div class="header">
+
+  <h2>目次</h2>
+</div>
+<div class="content-box">
+  <% @contents.each do |content| %>
+    <div>
+      <%= content.page %>:<%= content.content %>
+    </div>
+  <% end %>
+</div>
+
+公開 
