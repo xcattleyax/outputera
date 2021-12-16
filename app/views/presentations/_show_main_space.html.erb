@@ -4,9 +4,13 @@
       <%= @content.content %>
     </div>
     <div class="show-page">
-      <%= link_to "前のページ" %>
+      <% unless @page == 1 %>
+      <%= link_to "前のページ", presentation_path(@presentation.id, page: @page.to_i - 1) %>
+      <% end %>
       ページ: <%= @page%>
-      <%= link_to "次のページ" %>
+      <% unless @page == @max_page %>
+      <%= link_to "次のページ", presentation_path(@presentation.id, page: @page.to_i + 1) %>
+      <% end %>
     </div>
     <div class="show-text">
       <%= @content.text %>

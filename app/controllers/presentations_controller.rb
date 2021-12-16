@@ -23,9 +23,10 @@ class PresentationsController < ApplicationController
     if params[:page] == nil
       @page = 1
     else
-      @page = params[:page]
+      @page = params[:page].to_i
     end
     @content = @contents.find_by(page: @page)
+    @max_page = @contents.pluck(:page).max
   end
 
   def update
