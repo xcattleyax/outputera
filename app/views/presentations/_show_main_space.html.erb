@@ -1,0 +1,27 @@
+<div class="show-box">
+  <div class="show-note">
+    <div class="show-title">
+      <%= @content.content %>
+    </div>
+    <div class="show-page">
+      <% unless @page == 1 %>
+      <%= link_to "前のページ", presentation_path(@presentation.id, page: @page.to_i - 1) %>
+      <% end %>
+      ページ: <%= @page%>
+      <% unless @page == @max_page %>
+      <%= link_to "次のページ", presentation_path(@presentation.id, page: @page.to_i + 1) %>
+      <% end %>
+    </div>
+    <div class="show-text">
+      <%= @content.text %>
+    </div>
+  </div>
+  <div class="comment-box">
+    コメント
+    <%= form_with local: true do |f| %>
+      <%= f.text_field :title, class:"comment-form" %>
+      <%= f.submit "送信", class:"button" %>
+    <% end %>
+  </div>
+</div>
+

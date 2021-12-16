@@ -14,3 +14,10 @@
   padding: 5px;
   border: 1px solid blue;
 }
+
+/* プレゼン詳細ページ */
+.show-page{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,12 @@
+<h3>タイトル<h3>
+<h3><%= @presentation.title %></h3>
+<h3>目次</h3>
+<div class="content-box">
+  <% unless @contents == nil%>
+    <% @contents.each do |content| %>
+      <div>
+        <%= link_to " #{content.page} :#{content.content }", presentation_path(@presentation.id, page: content.page) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
