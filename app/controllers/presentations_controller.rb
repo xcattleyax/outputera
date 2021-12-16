@@ -17,6 +17,17 @@ class PresentationsController < ApplicationController
     end
   end
 
+  def show
+    @presentation = Presentation.find(params[:id])
+    @contents = @presentation.contents
+    if params[:page] == nil
+      @page = 1
+    else
+      @page = params[:page]
+    end
+    @content = @contents.find_by(page: @page)
+  end
+
   def update
     presentation = Presentation.find(params[:id])
     presentation.update(detail_id: 2)
