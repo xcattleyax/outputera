@@ -32,11 +32,6 @@ RSpec.describe NoteComment, type: :model do
         @comment.valid?
         expect(@comment.errors.full_messages).to include("Note must exist")
       end
-      it "status_idが空である" do
-        @comment.status_id = ""
-        @comment.valid?
-        expect(@comment.errors.full_messages).to include("Status can't be blank")
-      end
     end
   end
 end
