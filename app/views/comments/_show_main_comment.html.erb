@@ -1,5 +1,5 @@
-<% @comments.each do |comment| %>
 <h3>ノートコメント一覧</h3>
+<% @comments.each do |comment| %>
   <%= comment.note.title %>
   <%= link_to "#{comment.user.name}さんから", note_note_comment_path(note_id: comment.note_id)%>
 <% end %>

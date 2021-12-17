@@ -11,6 +11,8 @@ class NoteCommentsController < ApplicationController
   end
 
   def show
+    @comment = NoteComment.find(params[:id])
+    @note = Note.find(params[:id])
   end
 
   private
