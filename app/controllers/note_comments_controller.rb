@@ -13,6 +13,7 @@ class NoteCommentsController < ApplicationController
   def show
     @comment = NoteComment.find(params[:id])
     @note = Note.find(params[:id])
+    @answer = NoteAnswer.new
   end
 
   private

@@ -9,12 +9,13 @@
     </div>
   </div>
   <div class="answer-box">
-    <%= form_with local: true do |f| %>
+    <%= form_with model: [@note, @answer], local: true do |f| %>
       解答項目
-      <%= f.text_field :text, class:"answer-form"%>
+      <%= f.text_field :content, class:"answer-form"%>
       解答内容
       <%= f.text_area :text, class:"answer-form" %>
       <%= f.submit "解答する", class:"button" %>
+      <%= f.hidden_field :note_comment_id, value: @comment.id %>
       <%= link_to "解答済み","#"%>
     <% end %>
   </div>
