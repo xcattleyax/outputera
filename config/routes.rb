@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   resources :presentations, only:[:index, :new, :create, :show, :update] do
     resources :contents, only:[:new, :create, :edit, :update]
+    resources :presentation_comments, only:[:create]
   end
   resources :comments, only:[:show]
 end
