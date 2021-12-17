@@ -1,0 +1,5 @@
+<% @comments.each do |comment| %>
+<h3>ノートコメント一覧</h3>
+  <%= comment.note.title %>
+  <%= comment.user.name %>さんから
+<% end %>
