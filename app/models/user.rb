@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :notes
   has_many :presentations
   has_many :note_comments
+  has_many :note_answers
 
   validates :name, presence: true
 end

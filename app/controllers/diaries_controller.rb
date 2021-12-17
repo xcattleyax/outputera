@@ -14,8 +14,8 @@ class DiariesController < ApplicationController
                         'OK'
                       end
     end
-    @notes = Note.all.order("created_at DESC")
-    @presentations = Presentation.where(detail_id: 2).order("updated_at DESC")
+    @notes = Note.all.order('created_at DESC')
+    @presentations = Presentation.where(detail_id: 2).order('updated_at DESC')
   end
 
   def create

@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def show
     @user = User.find(params[:id])
     @trends = @user.trends

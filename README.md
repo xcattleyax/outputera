@@ -92,7 +92,7 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | content     | string     | null: false                    |
-| text        | string     | null: false                    |
+| text        | text       | null: false                    |
 | user        | references | null: false, foreign_key: true |
 | note        | references | null: false, foreign_key: true |
 
@@ -148,7 +148,7 @@
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
 | content      | string     | null: false                    |
-| text         | string     | null: false                    |
+| text         | text       | null: false                    |
 | user         | references | null: false, foreign_key: true |
 | presentation | references | null: false, foreign_key: true |
 
