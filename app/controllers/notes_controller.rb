@@ -9,6 +9,7 @@ class NotesController < ApplicationController
   def show
     @note = Note.find(params[:id])
     @comment = NoteComment.new
+    @answers = NoteAnswer.where(note_id: @note.id)
   end
 
   def create

@@ -11,6 +11,11 @@ class NoteAnswersController < ApplicationController
     end
   end
 
+  def show
+    @answer = NoteAnswer.find(params[:id])
+    @answers = NoteAnswer.where(note_id: params[:note_id])
+  end
+
   private
 
   def answer_params
