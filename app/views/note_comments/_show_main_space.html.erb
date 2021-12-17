@@ -16,7 +16,7 @@
       <%= f.text_area :text, class:"answer-form" %>
       <%= f.submit "解答する", class:"button" %>
       <%= f.hidden_field :note_comment_id, value: @comment.id %>
-      <%= link_to "解答済み","#"%>
+      <%= link_to "解答済み/コメント削除", note_note_comment_path(note_id: @note.id, id: @comment.id), method: :delete %>
     <% end %>
   </div>
 </div>

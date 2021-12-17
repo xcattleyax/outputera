@@ -16,6 +16,12 @@ class NoteCommentsController < ApplicationController
     @answer = NoteAnswer.new
   end
 
+  def destroy
+    @comment = NoteComment.find(params[:id])
+    @comment.destroy
+    redirect_to comment_path(current_user.id)
+  end
+
   private
   def comment_params
     params.require(:note_comment).permit(:comment).merge(user_id: current_user.id, note_id: params[:note_id])
