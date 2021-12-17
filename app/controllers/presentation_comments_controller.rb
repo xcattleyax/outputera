@@ -9,3 +9,10 @@ class PresentationCommentsController < ApplicationController
       render 'presentations/show'
     end
   end
+
+  private
+
+  def comment_params
+    params.require(:private_comment).permit(:comment).merge(user_id: current_user.id, private_id: params[:private_id])
+  end
+end
