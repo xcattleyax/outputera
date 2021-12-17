@@ -80,8 +80,14 @@
   margin-top: 20px;
 }
 
+.comment-form-area{
+  display: flex;
+  justify-content: space-around
+}
+
 .comment-form{
   height: 40px;
   width: calc(100vw - 300px);
   border: 1px solid black;
+  margin-top: 10px;
 }

@@ -1,0 +1,21 @@
+<div class="show-box">
+  <div class="show-comment-box">
+    <div class="show-title">
+      <%= @note.title %>
+    </div>
+    <h3>コメント内容</h3>
+    <div class="show-comment">
+      <%= @comment.comment %>
+    </div>
+  </div>
+  <div class="answer-box">
+    <%= form_with local: true do |f| %>
+      解答項目
+      <%= f.text_field :text, class:"answer-form"%>
+      解答内容
+      <%= f.text_area :text, class:"answer-form" %>
+      <%= f.submit "解答する", class:"button" %>
+      <%= link_to "解答済み","#"%>
+    <% end %>
+  </div>
+</div>

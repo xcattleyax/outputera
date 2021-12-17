@@ -1,0 +1,30 @@
+.show-comment-box{
+  font-size: 18px;
+  text-align: center;
+  height: calc(100vh - 350px);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.show-comment{
+  font-size: 18px;
+  text-align: left;
+  height: calc(100vh / 3);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.answer-box{
+  height: 220px;
+  padding: 10px;
+  border: 1px solid black;
+  margin-top: 20px;
+}
+
+.answer-form{
+  width: calc(100vw - 300px);
+  padding: 5px;
+  display: block;
+  border: 1px solid black;
+  overflow: scroll;
+}
