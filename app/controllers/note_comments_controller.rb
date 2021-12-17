@@ -18,6 +18,6 @@ class NoteCommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:note_comment).permit(:comment).merge(user_id: current_user.id, note_id: params[:note_id], status_id: 1)
+    params.require(:note_comment).permit(:comment).merge(user_id: current_user.id, note_id: params[:note_id])
   end
 end
