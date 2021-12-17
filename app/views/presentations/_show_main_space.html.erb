@@ -18,8 +18,8 @@
   </div>
   <div class="comment-box">
     コメント
-    <%= form_with local: true do |f| %>
-      <%= f.text_field :title, class:"comment-form" %>
+    <%= form_with model: [@presentation, @comment], local: true do |f| %>
+      <%= f.text_field :comment, class:"comment-form" %>
       <%= f.submit "送信", class:"button" %>
     <% end %>
   </div>
