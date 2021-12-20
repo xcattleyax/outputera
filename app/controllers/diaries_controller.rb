@@ -2,13 +2,13 @@ class DiariesController < ApplicationController
   def index
     @diary = Diary.new
     if user_signed_in?
-      @diary_info = Diary.find_by(date: Date.today, user_id: current_user.id)
-      @diary_info_yesterday = Diary.find_by(date: Date.today - 1, user_id: current_user.id)
-      @diary_status = if @diary_info.nil? && @diary_info_yesterday.nil?
+      diary_info = Diary.find_by(date: Date.today, user_id: current_user.id)
+      diary_info_yesterday = Diary.find_by(date: Date.today - 1, user_id: current_user.id)
+      @diary_status = if diary_info.nil? && diary_info_yesterday.nil?
                         nil
-                      elsif @diary_info.nil?
+                      elsif diary_info.nil?
                         Date.today
-                      elsif @diary_info_yesterday.nil?
+                      elsif diary_info_yesterday.nil?
                         Date.today - 1
                       else
                         'OK'
