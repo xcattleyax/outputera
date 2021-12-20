@@ -5,5 +5,8 @@ class CommentsController < ApplicationController
     @notes = @user.notes
     @note_ids = @notes.pluck(:id)
     @comments = NoteComment.where(note_id: @note_ids)
+    @presentations = @user.presentations
+    @presentation_ids = @presentations.pluck(:id)
+    @presentation_comments = PresentationComment.where(presentation_id: @presentation_ids)
   end
 end

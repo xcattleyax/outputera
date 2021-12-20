@@ -9,6 +9,12 @@ class PresentationCommentsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def destroy
+  end
+
   private
 
   def comment_params
