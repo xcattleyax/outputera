@@ -16,7 +16,7 @@
       <%= @content.text %>
     </div>
   </div>
-  <% unless @presentation.user_id == current_user.id %>
+  <% unless not user_signed_in? && @presentation.user_id == current_user.id %>
     <div class="comment-box">
       コメント
       <%= form_with model: [@presentation, @comment], local: true do |f| %>
