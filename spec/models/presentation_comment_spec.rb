@@ -34,5 +34,4 @@ RSpec.describe PresentationComment, type: :model do
       end
     end
   end
-
 end

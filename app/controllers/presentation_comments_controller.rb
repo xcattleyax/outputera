@@ -1,5 +1,4 @@
 class PresentationCommentsController < ApplicationController
-
   def create
     @comment = PresentationComment.new(comment_params)
     if @comment.save
@@ -13,6 +12,7 @@ class PresentationCommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:presentation_comment).permit(:comment).merge(user_id: current_user.id, presentation_id: params[:presentation_id])
+    params.require(:presentation_comment).permit(:comment).merge(user_id: current_user.id,
+                                                                 presentation_id: params[:presentation_id])
   end
 end
