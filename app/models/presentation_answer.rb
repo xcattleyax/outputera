@@ -1,5 +1,4 @@
 class PresentationAnswer < ApplicationRecord
-
   belongs_to :user
   belongs_to :presentation
 
@@ -7,5 +6,4 @@ class PresentationAnswer < ApplicationRecord
     validates :content
     validates :text, length: { maximum: 1000 }
   end
-
 end

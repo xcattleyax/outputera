@@ -46,4 +46,3 @@ RSpec.describe PresentationAnswer, type: :model do
     end
   end
 end
-

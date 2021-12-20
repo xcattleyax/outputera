@@ -1,5 +1,4 @@
 class PresentationAnswersController < ApplicationController
-
   def create
     @answer = PresentationAnswer.new(answer_params)
     if @answer.save
@@ -17,7 +16,9 @@ class PresentationAnswersController < ApplicationController
   end
 
   private
+
   def answer_params
-    params.require(:presentation_answer).permit(:content, :text).merge(user_id: current_user.id, presentation_id: params[:presentation_id])
+    params.require(:presentation_answer).permit(:content, :text).merge(user_id: current_user.id,
+                                                                       presentation_id: params[:presentation_id])
   end
 end
