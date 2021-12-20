@@ -3,12 +3,8 @@ class ContentsController < ApplicationController
     @content = Content.new
     @presentation = Presentation.find(params[:presentation_id])
     @contents = @presentation.contents
-    @page = @contents.pluck(:page)
-    @page = if @page.nil?
-              1
-            else
-              @page.max.to_i + 1
-            end
+    page = @contents.pluck(:page)
+    @page = Content.page_set(page)
   end
 
   def create

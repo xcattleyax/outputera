@@ -10,4 +10,12 @@ class Presentation < ApplicationRecord
   validates :title, presence: true
   validates :category_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :detail_id, presence: true
+
+  def self.page_set(params)
+    if params[:page].nil?
+      1
+    else
+      params[:page].to_i
+    end
+  end
 end
