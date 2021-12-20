@@ -28,6 +28,7 @@ class PresentationsController < ApplicationController
     @content = @contents.find_by(page: @page)
     @max_page = @contents.pluck(:page).max
     @comment = PresentationComment.new
+    @answers = PresentationAnswer.where(presentation_id: @presentation.id)
   end
 
   def update

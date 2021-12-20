@@ -10,3 +10,9 @@
     <% end %>
   <% end %>
 </div>
+<h3>解答一覧</h3>
+<div class="presentation-answer-box">
+  <% @answers.each do |answer| %>
+    <%= link_to answer.content, presentation_presentation_answer_path(presentation_id: answer.presentation_id, id: answer.id)%>
+  <% end %>
+</div>

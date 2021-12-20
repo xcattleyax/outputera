@@ -11,6 +11,9 @@ class PresentationAnswersController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   def answer_params
     params.require(:presentation_answer).permit(:content, :text).merge(user_id: current_user.id, presentation_id: params[:presentation_id])
