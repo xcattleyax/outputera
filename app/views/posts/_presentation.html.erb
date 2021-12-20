@@ -1,0 +1,9 @@
+<div class="post-box">
+  <h3>プレゼン</h3>
+  <% @presentations.each do |presentation| %>
+    <div class="post-content">
+      <p>タイトル:<%= link_to "タイトル: #{presentation.title} ", presentation_path(presentation.id) %></p>
+      カテゴリー: <%= presentation.category.name %>
+    </div>
+  <% end %>
+</div>
