@@ -1,5 +1,5 @@
 class NoteCommentsController < ApplicationController
-  before_action :move_to_root, only:[:show]
+  before_action :move_to_root, only: [:show]
 
   def create
     @comment = NoteComment.new(comment_params)
@@ -30,8 +30,6 @@ class NoteCommentsController < ApplicationController
 
   def move_to_root
     @note = Note.find(params[:note_id])
-    unless @note.user_id == current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path unless @note.user_id == current_user.id
   end
 end

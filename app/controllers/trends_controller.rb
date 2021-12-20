@@ -49,8 +49,6 @@ class TrendsController < ApplicationController
   end
 
   def move_to_root
-    unless current_user.id.to_s == params[:id]
-      redirect_to root_path
-    end
+    redirect_to root_path unless current_user.id.to_s == params[:id]
   end
 end
