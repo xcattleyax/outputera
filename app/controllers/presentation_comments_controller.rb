@@ -16,6 +16,9 @@ class PresentationCommentsController < ApplicationController
   end
 
   def destroy
+    @comment = PresentationComment.find(params[:id])
+    @comment.destroy
+    redirect_to comment_path(current_user.id)
   end
 
   private
