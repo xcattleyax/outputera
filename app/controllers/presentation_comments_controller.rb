@@ -13,6 +13,6 @@ class PresentationCommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:private_comment).permit(:comment).merge(user_id: current_user.id, private_id: params[:private_id])
+    params.require(:presentation_comment).permit(:comment).merge(user_id: current_user.id, presentation_id: params[:presentation_id])
   end
 end
