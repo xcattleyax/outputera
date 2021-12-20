@@ -20,11 +20,7 @@ class PresentationsController < ApplicationController
   def show
     @presentation = Presentation.find(params[:id])
     @contents = @presentation.contents
-    @page = if params[:page].nil?
-              1
-            else
-              params[:page].to_i
-            end
+    @page = Presentation.page_set(params)
     @content = @contents.find_by(page: @page)
     @max_page = @contents.pluck(:page).max
     @comment = PresentationComment.new
