@@ -4,15 +4,7 @@ class DiariesController < ApplicationController
     if user_signed_in?
       diary_info = Diary.find_by(date: Date.today, user_id: current_user.id)
       diary_info_yesterday = Diary.find_by(date: Date.today - 1, user_id: current_user.id)
-      @diary_status = if diary_info.nil? && diary_info_yesterday.nil?
-                        nil
-                      elsif diary_info.nil?
-                        Date.today
-                      elsif diary_info_yesterday.nil?
-                        Date.today - 1
-                      else
-                        'OK'
-                      end
+      @diary_status = Diary.status(diary_info, diary_info_yesterday)
     end
     @notes = Note.all.order('created_at DESC')
     @presentations = Presentation.where(detail_id: 2).order('updated_at DESC')
