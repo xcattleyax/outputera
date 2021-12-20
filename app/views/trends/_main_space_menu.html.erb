@@ -9,7 +9,7 @@
   </div>
   <% if current_user.id == @user.id %>
     <div class="menu-content">
-      <%= link_to "コメント一覧", comment_path(current_user.id)%>
+      <%= link_to "コメント一覧", comment_path(@user.id)%>
     </div>
   <% end %>
 </div>
