@@ -10,6 +10,10 @@ class PresentationCommentsController < ApplicationController
   end
 
   def show
+    binding.pry
+    @comment = PresentationComment.find(params[:id])
+    @presentation = Presentation.find(params[:presentation_id])
+    @answer = PresentationAnswer.new
   end
 
   def destroy
