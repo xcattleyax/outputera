@@ -12,6 +12,8 @@ class PresentationAnswersController < ApplicationController
   end
 
   def show
+    @answer = PresentationAnswer.find(params[:id])
+    @answers = PresentationAnswer.where(presentation_id: params[:presentation_id])
   end
 
   private
