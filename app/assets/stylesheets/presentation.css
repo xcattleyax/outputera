@@ -1,9 +1,9 @@
 .content-box{
-  height: calc(100vh - 300px);
+  height: calc(100vh - 400px);
   width: 180px;
   padding: 5px;
   border: 1px solid black;
-  overflow: scroll
+  overflow: scroll;
 }
 
 .output-box{
@@ -20,4 +20,11 @@
   font-size: 20px;
   display: flex;
   justify-content: space-around;
+}
+
+.presentation-answer-box{
+  height: calc(100vh - 480px);
+  width: 180px;
+  border: 1px solid black;
+  overflow: scroll;
 }

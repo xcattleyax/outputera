@@ -9,6 +9,18 @@ class PresentationCommentsController < ApplicationController
     end
   end
 
+  def show
+    @comment = PresentationComment.find(params[:id])
+    @presentation = Presentation.find(params[:presentation_id])
+    @answer = PresentationAnswer.new
+  end
+
+  def destroy
+    @comment = PresentationComment.find(params[:id])
+    @comment.destroy
+    redirect_to comment_path(current_user.id)
+  end
+
   private
 
   def comment_params

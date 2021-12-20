@@ -1,0 +1,22 @@
+<div class="show-box">
+  <div class="show-comment-box">
+    <div class="show-title">
+      <%= @presentation.title %>
+    </div>
+    <h3>コメント内容</h3>
+    <div class="show-comment">
+      <%= @comment.comment %>
+    </div>
+  </div>
+  <div class="answer-box">
+    <%= form_with model: [@presentation, @answer], local: true do |f| %>
+      解答項目
+      <%= f.text_field :content, class:"answer-form"%>
+      解答内容
+      <%= f.text_area :text, class:"answer-form" %>
+      <%= f.submit "解答する", class:"button" %>
+      <%= f.hidden_field :presentation_comment_id, value: @comment.id %>
+      <%= link_to "解答済み/コメント削除", presentation_presentation_comment_path(presentation_id: @presentation.id, id: @comment.id), method: :delete %>
+    <% end %>
+  </div>
+</div>
