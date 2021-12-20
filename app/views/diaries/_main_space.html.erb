@@ -4,6 +4,7 @@
     <div class="note-selection">
       <p><%= link_to "タイトル: #{note.title} ", note_path(note.id) %></p>
       <p>カテゴリー: <%= note.category.name %></p>
+      <p>投稿者: <%= link_to note.user.name, post_path(note.user_id) %></p>
     </div>
   <% end %>
 </div>

@@ -1,5 +1,6 @@
 class TrendsController < ApplicationController
   before_action :set_user, only: [:show, :edit]
+  before_action :move_to_root, only: [:show]
 
   def show
     @diaries = @user.diaries
@@ -45,5 +46,9 @@ class TrendsController < ApplicationController
 
   def trend_params
     params.require(:trend).permit(:category_id).merge(user_id: current_user.id)
+  end
+
+  def move_to_root
+    redirect_to root_path unless current_user.id.to_s == params[:id]
   end
 end

@@ -1,0 +1,9 @@
+<div class="post-box">
+  <h3>ノート</h3>
+  <% @notes.each do |note| %>
+    <div class="post-content">
+      <p>タイトル: <%= link_to "タイトル: #{note.title} ", note_path(note.id) %></p>
+      カテゴリー: <%= note.category.name %>
+    </div>
+  <% end %>
+</div>

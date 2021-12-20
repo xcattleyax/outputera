@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'diaries#index'
   resources :diaries, only:[:create]
   resources :trends, except:[:index, :update]
+  resources :posts, only:[:show]
   resources :notes, only:[:index, :new, :show, :create] do
     resources :note_comments, only:[:create, :show, :destroy]
     resources :note_answers, only:[:create, :show]

@@ -1,11 +1,15 @@
 <div class="menu-bar">
+  <% if current_user.id == @user.id %>
+    <div class="menu-content">
+      <%= link_to "勉強時間", trend_path(current_user.id) %>
+    </div>
+  <% end %>
   <div class="menu-content">
-    <%= link_to "勉強時間", trend_path(current_user.id) %>
+    <%= link_to "投稿一覧", post_path(@user.id) %>
   </div>
-  <div class="menu-content">
-    投稿一覧
-  </div>
-  <div class="menu-content">
-    <%= link_to "コメント一覧", comment_path(current_user.id)%>
-  </div>
+  <% if current_user.id == @user.id %>
+    <div class="menu-content">
+      <%= link_to "コメント一覧", comment_path(@user.id)%>
+    </div>
+  <% end %>
 </div>
