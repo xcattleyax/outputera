@@ -10,7 +10,7 @@
       <%= @note.text %>
     </div>
   </div>
-  <% unless not user_signed_in? && @note.user_id == current_user.id %>
+  <% unless not user_signed_in? && @note.user_id != current_user.id %>
     <div class="comment-box">
       コメント
       <%= form_with model: [@note,@comment], class:"comment-form-area", local: true do |f| %>
