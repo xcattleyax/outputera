@@ -1,4 +1,14 @@
 <div class="side-bottom">
+  <h3>検索</h3>
+    <%= form_with url: search_diaries_path , method: :get, local: true do |f| %>
+    カテゴリー検索
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
+    <p>タイトルキーワード</p>
+    <div class="title-keyword">
+    <%= f.text_field :title%>
+    </div>
+    <%= f.submit "検索", class:"button"%>
+  <% end %>
   <div class="diary-box">
     <% if @diary_status == 'OK' %>
       記録できる日記はありません。

@@ -18,4 +18,32 @@ class Diary < ApplicationRecord
       'OK'
     end
   end
+
+  def self.note_search(category_id, title)
+    order_notes = Note.all.order('created_at DESC')
+    if category_id != '1' && title != ''
+      notes = order_notes.where(category_id: category_id)
+      notes.where('title LIKE(?)', "%#{title}%")
+    elsif category_id == '1' && title == ''
+      order_notes
+    elsif title != ''
+      order_notes.where('title LIKE(?)', "%#{title}%")
+    else
+      order_notes.where(category_id: category_id)
+    end
+  end
+
+  def self.presentation_search(category_id, title)
+    release_presentations = Presentation.where(detail_id: 2).order('created_at DESC')
+    if category_id != '1' && title != ''
+      presentations = release_presentations.where(category_id: category_id)
+      presentations.where('title LIKE(?)', "%#{title}%")
+    elsif category_id == '1' && title == ''
+      release_presentations
+    elsif title != ''
+      release_presentations.where('title LIKE(?)', "%#{title}%")
+    else
+      release_presentations.where(category_id: category_id)
+    end
+  end
 end

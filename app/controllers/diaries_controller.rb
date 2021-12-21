@@ -20,6 +20,11 @@ class DiariesController < ApplicationController
     end
   end
 
+  def search
+    @notes = Diary.note_search(params[:category_id], params[:title])
+    @presentations = Diary.presentation_search(params[:category_id], params[:title])
+  end
+
   private
 
   def diary_params
