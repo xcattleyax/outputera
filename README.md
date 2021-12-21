@@ -35,6 +35,8 @@
 - has_many :presentation_comments
 - has_many :presentation_answers
 
+- has_many :opinion
+
 ## trends テーブル
 
 | Column        | Type       | Options                        |
@@ -156,3 +158,18 @@
 
 - belongs_to :user
 - belongs_to :presentation
+
+
+## 追加機能
+
+## opinion テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| title        | string     | null: false                    |
+| content      | text       | null: false                    |
+| user         | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
