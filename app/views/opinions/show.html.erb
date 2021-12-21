@@ -1,0 +1,13 @@
+<div class="header">
+  <%= render "diaries/header" %>
+</div>
+<div class="show-box">
+  <div class="show-comment-box">
+    <div class="show-title">
+      <%= @opinion.title %>
+    </div>
+    <h3>コメント内容</h3>
+    <div class="show-comment">
+      <%= @opinion.content %>
+    </div>
+  </div>
