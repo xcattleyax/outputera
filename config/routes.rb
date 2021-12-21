@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   end
   resources :comments, only:[:show]
   resources :opinions, only:[:index, :new, :create, :show]
+  resources :followers, only:[:create]
 end
