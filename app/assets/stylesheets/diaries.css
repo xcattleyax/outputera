@@ -109,6 +109,7 @@
   width: calc((100vw - 200px) / 2);
   padding: 10px;
   border: 2px solid black;
+  overflow: scroll;
 }
 
 .note-selection{
@@ -122,6 +123,7 @@
   width: calc((100vw - 200px) / 2);
   padding: 10px;
   border: 2px solid black;
+  overflow: scroll;
 }
 
 .title-keyword{

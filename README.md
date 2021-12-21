@@ -35,7 +35,8 @@
 - has_many :presentation_comments
 - has_many :presentation_answers
 
-- has_many :opinion
+- has_many :opinions
+- has_many :followers
 
 ## trends テーブル
 
@@ -173,3 +174,13 @@
 ### Association
 
 - belongs_to :user
+
+## follower テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| user         | references | null: false, foreign_key: true |
+
+### Association
+
+-belongs_to :user
