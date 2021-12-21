@@ -1,6 +1,9 @@
 class OpinionsController < ApplicationController
 
-  def index
+  def new
+    @opinion = Opinion.new
   end
-  
+
+  def create
+  end
 end

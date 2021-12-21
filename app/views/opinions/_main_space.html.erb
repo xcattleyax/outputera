@@ -1,0 +1,12 @@
+<div class="note-new-head">意見箱</div>
+<%= form_with model: @opinion, local: true do |f| %>
+  <div class="note-form-box">タイトル
+  <%= f.text_field :title, class:"post-title" %>
+  </div>
+  <div class="note-form-box">本文(1000字以内)
+  <%= f.text_area :content, class:"post-text"%>
+  </div>
+  <div class="note-form-button">
+  <%= f.submit "投函", class:"button" %>
+  </div>
+<% end %>
