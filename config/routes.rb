@@ -16,5 +16,5 @@ Rails.application.routes.draw do
     resources :presentation_answers, only:[:create, :show]
   end
   resources :comments, only:[:show]
-  resources :opinions, only:[:new, :create]
+  resources :opinions, only:[:index, :new, :create, :show]
 end

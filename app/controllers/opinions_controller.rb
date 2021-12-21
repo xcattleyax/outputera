@@ -1,5 +1,9 @@
 class OpinionsController < ApplicationController
 
+  def index
+    @opinions = Opinion.all.order("created_at DESC")
+  end
+
   def new
     @opinion = Opinion.new
   end
@@ -11,6 +15,10 @@ class OpinionsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  def show
+    @opinion = Opinion.find(params[:id])
   end
 
   private

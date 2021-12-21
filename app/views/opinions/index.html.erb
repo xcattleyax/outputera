@@ -1,0 +1,10 @@
+<div class="header">
+  <%= render "diaries/header" %>
+</div>
+<h2>管理人用ページ</h2>
+<% @opinions.each do |opinion| %>
+  <div class="note-selection">
+  <p>タイトル: <%= link_to opinion.title, opinion_path(id: opinion.id) %></p>
+  ユーザー名: <%= opinion.user.name %>
+  </div>
+<% end %>
