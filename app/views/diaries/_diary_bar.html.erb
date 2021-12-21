@@ -1,10 +1,12 @@
 <div class="side-bottom">
   <h3>検索</h3>
-    <%= form_with url: search_diaries_path ,local: true do |f| %>
+    <%= form_with url: search_diaries_path , method: :get, local: true do |f| %>
     カテゴリー検索
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
-    キーワード
-    <%= f.text_field :title %>
+    <p>タイトルキーワード</p>
+    <div class="title-keyword">
+    <%= f.text_field :title%>
+    </div>
     <%= f.submit "検索", class:"button"%>
   <% end %>
   <div class="diary-box">

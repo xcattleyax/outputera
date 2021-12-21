@@ -20,28 +20,30 @@ class Diary < ApplicationRecord
   end
 
   def self.note_search(category_id, title)
-    if category_id != "" && title != ""
-      notes = Note.where(category_id: category_id)
+    order_notes = Note.all.order("created_at DESC")
+    if category_id != "1" && title != ""
+      notes = order_notes.where(category_id: category_id)
       notes.where('title LIKE(?)', "%#{title}%")
+    elsif category_id == "1" && title == ""
+      order_notes
     elsif title != ""
-      Note.where('title LIKE(?)', "%#{title}%")
-    elsif category_id != ""
-      Note.where(category_id: category_id)
-    else
-      Note.all
+      order_notes.where('title LIKE(?)', "%#{title}%")
+    else 
+      order_notes.where(category_id: category_id)
     end
   end
 
   def self.presentation_search(category_id, title)
-    if category_id != "" && title != ""
-      presentations = Presentation.where(category_id: category_id)
+    release_presentations = Presentation.where(detail_id: 2).order("created_at DESC")
+    if category_id != "1" && title != ""
+      presentations = release_presentations.where(category_id: category_id)
       presentations.where('title LIKE(?)', "%#{title}%")
+    elsif category_id == "1" && title == ""
+      release_presentations
     elsif title != ""
-      Presentation.where('title LIKE(?)', "%#{title}%")
-    elsif category_id != ""
-      Presentation.where(category_id: category_id)
+      release_presentations.where('title LIKE(?)', "%#{title}%")
     else
-      Presentation.all
+      release_presentations.where(category_id: category_id)
     end
   end
 end
