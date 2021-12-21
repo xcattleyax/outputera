@@ -1,7 +1,6 @@
 class OpinionsController < ApplicationController
-
   def index
-    @opinions = Opinion.all.order("created_at DESC")
+    @opinions = Opinion.all.order('created_at DESC')
   end
 
   def new
@@ -13,7 +12,7 @@ class OpinionsController < ApplicationController
     if @opinion.save
       redirect_to root_path
     else
-      render "new"
+      render 'new'
     end
   end
 
@@ -22,6 +21,7 @@ class OpinionsController < ApplicationController
   end
 
   private
+
   def opinion_params
     params.require(:opinion).permit(:title, :content).merge(user_id: current_user.id)
   end
