@@ -1,0 +1,9 @@
+<div>
+  <h2>フォロワー数</h2>
+  <%= "#{@following_number}人"%>
+  <div class="follow-bottom">
+    <% @following_users.each do |following| %>
+      <p><%= link_to following.name, post_path(following.id)%></p>
+    <% end %>
+  </div>
+</div>

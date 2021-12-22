@@ -5,5 +5,6 @@ class PostsController < ApplicationController
     @notes = @user.notes.order('created_at DESC')
     presentations = @user.presentations.order('created_at DESC')
     @presentations = presentations.where(detail_id: 2)
+    @follow_ids = @user.followers.pluck(:follow_id)
   end
 end

@@ -23,7 +23,7 @@
 }
 
 .presentation-answer-box{
-  height: calc(100vh - 480px);
+  height: calc(100vh / 4);
   width: 180px;
   border: 1px solid black;
   overflow: scroll;

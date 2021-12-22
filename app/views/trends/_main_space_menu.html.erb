@@ -12,4 +12,7 @@
       <%= link_to "コメント一覧", comment_path(@user.id)%>
     </div>
   <% end %>
+  <div class="menu-content">
+    <%= link_to "フォロー/フォロワー", follower_path(@user.id)%>
+  </div>
 </div>

@@ -1,0 +1,13 @@
+.follow-box{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.follow-bottom{
+  height: calc(100vh - 220px);
+  width: calc((100vw - 300px) / 2);
+  padding: 5px;
+  border: 1px solid black;
+  overflow: scroll;
+}

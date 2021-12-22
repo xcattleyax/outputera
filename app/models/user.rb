@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :note_answers
   has_many :presentation_comments
   has_many :presentation_answers
-  has_many :opinion
+  has_many :opinions
+  has_many :followers
 
   validates :name, presence: true
 end
