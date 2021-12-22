@@ -1,8 +1,8 @@
 <div class="trend-info">
   <div class="name-content">
     <p>名前</p>
-    <%= @user.name %>
-    <% unless not user_signed_in? && @user.id != current_user.id && @follow_ids.include?(@user.id) %>
+    <p><%= @user.name %></p>
+    <% if user_signed_in? && @user.id != current_user.id && @follow_ids.exclude?(@user.id) %>
     <%= link_to "フォローする", followers_path(follow_id: @user.id), method: :post%>
     <% end %>
   </div>
