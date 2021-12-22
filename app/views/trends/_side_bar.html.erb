@@ -2,6 +2,7 @@
   <div class="name-content">
     <p>名前</p>
     <%= @user.name %>
+    <%= link_to "フォローする", followers_path(follow_id: @user.id), method: :post%>
   </div>
   <p>カテゴリー</p>
   <% if user_signed_in? && current_user.id == @user.id %>
