@@ -4,7 +4,7 @@ class TrendsController < ApplicationController
 
   def show
     @diaries = @user.diaries
-    @followers = @user.followers.pluck(:follow_id)
+    @follow_ids = @user.followers.pluck(:follow_id)
     if params[:trend].nil?
       @trend = Trend.new
     else
