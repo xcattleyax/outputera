@@ -1,6 +1,9 @@
-<h2>フォロー数</h2>
-<%= "#{@follow_number}人" %>
-<h3>一覧</h3>
-<% @followers.each do |follower| %>
-  <%= link_to follower.user.name, post_path(follower.user_id)%>
-<% end %>
+<div>
+  <h2>フォロー数</h2>
+  <%= "#{@follow_number}人" %>
+  <div class="follow-bottom">
+    <% @followers.each do |follower| %>
+      <%= link_to follower.user.name, post_path(follower.user_id)%>
+    <% end %>
+  </div>
+</div>

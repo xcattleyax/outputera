@@ -15,6 +15,10 @@ class FollowersController < ApplicationController
     @followers = @user.followers
     @follow_ids = @followers.pluck(:follow_id)
     @follow_number = @follow_ids.length
+    @followings = Follower.where(follow_id: @user.id)
+    @following_ids = @followings.pluck(:user_id)
+    @following_users = User.where(id: @following_ids)
+    @following_number = @following_ids.length
   end
 
   private
