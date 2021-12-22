@@ -1,7 +1,6 @@
 class FollowersController < ApplicationController
 
   def create
-    binding.pry
     @follower = Follower.new(follower_params)
     if @follower.save
       redirect_to root_path
