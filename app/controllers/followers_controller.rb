@@ -12,8 +12,8 @@ class FollowersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @trends = @user.trends
-    @followers = @user.followers
-    @follow_ids = @followers.pluck(:follow_id)
+    @follow_ids = @user.followers.pluck(:follow_id)
+    @followers = User.where(id: @follow_ids)
     @follow_number = @follow_ids.length
     @followings = Follower.where(follow_id: @user.id)
     @following_ids = @followings.pluck(:user_id)
