@@ -91,3 +91,10 @@
   border: 1px solid black;
   margin-top: 10px;
 }
+
+.note-answer-box{
+  height: calc(100vh - 200px);
+  border: 1px solid black;
+  margin: 10px;
+  overflow: scroll;
+}

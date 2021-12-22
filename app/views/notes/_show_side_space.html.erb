@@ -1,4 +1,6 @@
 <h3>解答一覧</h3>
-<% @answers.each do |answer| %>
-  <%= link_to answer.content, note_note_answer_path(note_id: answer.note_id, id: answer.id) %>
-<% end %>
+<div class="note-answer-box">
+  <% @answers.each do |answer| %>
+    <%= link_to answer.content, note_note_answer_path(note_id: answer.note_id, id: answer.id) %>
+  <% end %>
+</div>
