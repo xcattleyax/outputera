@@ -11,7 +11,7 @@
       <%= link_to "次のページ", presentation_path(@presentation.id, page: @page.to_i + 1) %>
       <% end %>
     </div>
-    <div class="show-text">
+    <div class="show-text", style="white-space:pre-wrap">
       <%= @content.text %>
     </div>
   </div>
