@@ -1,18 +1,18 @@
+/* content */
 .content-box{
-  height: calc(100vh - 400px);
-  width: 180px;
+  height: calc(100vh - 300px);
+  width: 160px;
   padding: 5px;
   border: 1px solid black;
-  overflow: scroll;
-}
-
-.output-box{
-  padding: 10px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  word-break: break-all;
 }
 
 .output-button{
   padding: 5px;
   border: 1px solid blue;
+  text-decoration: none;
 }
 
 /* プレゼン詳細ページ */

@@ -16,8 +16,9 @@
 .main-bottom{
   height: calc(100vh - 80px);
   width: calc(100vw - 200px);
-  padding: 5px;
+  padding: 10px;
   border: 2px solid gray;
+  overflow-y: scroll;
 }
 
 /* メインスペース2分割 */

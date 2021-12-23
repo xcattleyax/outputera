@@ -1,0 +1,11 @@
+<h2>目次</h2>
+<div class="content-box">
+  <% unless @contents == nil%>
+    <% @contents.each do |content| %>
+      <p><%= link_to " #{content.page} :#{content.content }", edit_presentation_content_path(id: content.presentation_id, page: content.page) %></p>
+    <% end %>
+  <% end %>
+</div>
+<h3>※注意</h3>
+<p>公開後は、編集ができません。</p>
+<%= link_to "公開", presentation_path(id: @presentation.id), method: :patch, class:"output-button" %>
