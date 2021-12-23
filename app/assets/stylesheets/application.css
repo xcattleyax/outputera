@@ -18,3 +18,51 @@
  * {
    box-sizing: border-box;
  }
+
+  /* ヘッダー */
+.header{
+  display: flex;
+}
+
+/* サイドヘッダー */
+.header-side{
+  width: 200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(158, 209, 238);
+}
+
+.app-name-frame{
+  text-align: center;
+  padding: 5px;
+  background-color: rgb(85, 180, 235);
+}
+.app-name{
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+/* メインヘッダー */
+.header-main{
+  height: 80px;
+  width: calc(100vw - 200px);
+  display: flex;
+  background-color: rgb(158, 209, 238);
+}
+
+.user-name{
+  font-size: 24px;
+  padding: 20px;
+  width: calc(100vw - 250px);
+}
+
+.header-content{
+  width: 125px;
+  display: flex;
+  align-items: center;
+}
+
+
