@@ -1,7 +1,7 @@
 <h3>タイトル<h3>
 <h3><%= @presentation.title %></h3>
 <h3>目次</h3>
-<div class="content-box">
+<div class="content-box-show">
   <% unless @contents == nil%>
     <% @contents.each do |content| %>
       <div>
