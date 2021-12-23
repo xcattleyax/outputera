@@ -1,6 +1,3 @@
-<div class="header">
-  <%= render "diaries/header" %>
-</div>
 カテゴリー
 <%= form_with url: trend_path, method: :delete, local: true do |f| %>
   <%= f.collection_select(:category_id, Category.where(id: @trend_categories), :id, :name, {}, {class:"diary-category"}) %>

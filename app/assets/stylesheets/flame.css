@@ -1,0 +1,37 @@
+/* ボトム */
+.wrapper{
+  display: flex;
+}
+
+/* サイドバー */
+.side-bottom{
+  height: calc(100vh - 80px);
+  width: 200px;
+  padding: 10px;
+  border: 2px solid gray;
+  overflow-y: scroll;
+}
+
+/* メインスペース */
+.main-bottom{
+  height: calc(100vh - 80px);
+  width: calc(100vw - 200px);
+  padding: 10px;
+  border: 2px solid gray;
+  overflow-y: scroll;
+}
+
+.main-bottom-mypage{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;  
+}
+
+/* メインスペース2分割 */
+.main-bottom-half{
+  height: calc(100vh - 80px);
+  width: calc((100vw - 200px) / 2);
+  padding: 10px;
+  border: 2px solid gray;
+  overflow-y: scroll;
+}

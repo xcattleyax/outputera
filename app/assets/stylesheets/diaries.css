@@ -1,73 +1,24 @@
-/* ヘッダー */
-.header{
-  display: flex;
-}
-
-/* サイドヘッダー */
-.side-top{
-  width: 200px;
-  height: 80px;
-  border: 2px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.app-name-frame{
-  text-align: center;
+/* サイドボトム */
+/* 検索 */
+.diary-category{
+  font-size: 16px;
+  width: 140px;
   padding: 5px;
-  border: 2px solid black;
-}
-.app-name{
-  font-size: 24px;
-  color: black;
-  text-decoration: none;
+  border: 1px solid black;
 }
 
-/* メインヘッダー */
-.main-top{
-  height: 80px;
-  width: calc(100vw - 200px);
-  border: 2px solid black;
-  display: flex;
+.title-keyword{
+  width: 160px;
+  border: 1px solid black;
 }
 
-.user-name{
-  font-size: 24px;
-  padding: 20px;
-  width: calc(100vw - 250px);
-}
-
-.login-box{
-  width: 125px;
-  display: flex;
-  align-items: center;
-}
-
-.registrations-box{
-  width: 125px;
-  display: flex;
-  align-items: center;
-}
-
-
-/* ボトム */
-.wrapper{
-  display: flex;
-}
-
-/* サイドボトム、ダイアリーバー */
-.side-bottom{
-  height: calc(100vh - 80px);
-  width: 200px;
-  border: 2px solid black;
-}
-
+/* 日記 */
 .diary-box{
   font-size: 20px;
   text-align: center;
-  margin: 20px;
-  border: 1px solid black;
+  padding: 5px;
+  border: 2px solid gray;
+  margin: 10px 0;
 }
 
 .diary-infomation{
@@ -78,7 +29,6 @@
 .diary-form{
   font-size: 18px;
   width: 140px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -90,43 +40,10 @@
   margin-left: 10px;
 }
 
-.diary-category{
-  font-size: 16px;
-  width: 140px;
-  padding: 5px;
-  border: 1px solid black;
-}
-
-.submit-button{
-  margin: 10px;
-  width: 50px;
-  border: 1px solid black;
-}
-
 /* メインボトム */
-.main-bottom{
-  height: calc(100vh - 80px);
-  width: calc((100vw - 200px) / 2);
-  padding: 10px;
-  border: 2px solid black;
-  overflow: scroll;
-}
 
-.note-selection{
+.selection{
   border: 1px solid black;
   margin: 5px;
-}
-
-/* メインボトムサブ */
-.main-bottom-sub{
-  height: calc(100vh - 80px);
-  width: calc((100vw - 200px) / 2);
-  padding: 10px;
-  border: 2px solid black;
-  overflow: scroll;
-}
-
-.title-keyword{
-  width: 180px;
-  border: 1px solid black;
+  word-break: break-all;
 }

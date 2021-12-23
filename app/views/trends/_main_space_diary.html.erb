@@ -1,4 +1,4 @@
-<div class="mypage-calendar-contents">
+<div class="calendar-category">
   <%= form_with model: @trend, url: trend_path(current_user.id), method: :get, local: true do |f| %>
     <%= f.collection_select(:category_id, Category.where(id: [1] + @trends.pluck(:category_id)), :id, :name, {}, {class:"diary-category"}) %>
     <%= f.submit "変更",class:"button"%>
