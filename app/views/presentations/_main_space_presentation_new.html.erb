@@ -1,8 +1,8 @@
 <%= form_with model: @presentation, local: true do |f| %>
-  <div class="note-form-box">プレゼンタイトル
+  <div class="post-form-box">プレゼンタイトル
     <%= f.text_field :title, class:"post-title" %>
   </div>
-  <div class="note-form-box">カテゴリー
+  <div class="post-form-box">カテゴリー
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
   </div>
   <div class="note-form-button">
