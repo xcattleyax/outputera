@@ -68,9 +68,10 @@
 
 .show-text{
   border: 1px solid black;
-  height: calc(100vh / 2);
+  height: 60%;
   text-align: left;
-  overflow: scroll;
+  overflow-y: scroll;
+  word-break: break-all;
 }
 
 .comment-box{
