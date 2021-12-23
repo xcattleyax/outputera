@@ -1,6 +1,6 @@
-<div class="side-bottom">
+<%# 検索 %>
   <h3>検索</h3>
-    <%= form_with url: search_diaries_path , method: :get, local: true do |f| %>
+  <%= form_with url: search_diaries_path , method: :get, local: true do |f| %>
     カテゴリー検索
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
     <p>タイトルキーワード</p>
@@ -9,6 +9,8 @@
     </div>
     <%= f.submit "検索", class:"button"%>
   <% end %>
+<%# /検索 %>
+<%# 日記入力 %>
   <div class="diary-box">
     <% if @diary_status == 'OK' %>
       記録できる日記はありません。
@@ -30,7 +32,7 @@
           </div>
           <p>カテゴリー</p>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
-          <%= f.submit '送信', class:"submit-button" %>
+          <%= f.submit '送信', class:"button" %>
         </div>
       <% end %>
     <% else %>
@@ -47,11 +49,10 @@
           </div>
           <p>カテゴリー</p>
           <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
-          <%= f.submit '送信', class:"submit-button" %>
+          <%= f.submit '送信', class:"button" %>
         </div>
       <% end %>
     <% end %>
   </div>
-
+<%# /日記入力 %>
   <%= link_to "意見箱", new_opinion_path %>
-</div>

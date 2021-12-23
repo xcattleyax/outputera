@@ -1,0 +1,24 @@
+/* ボトム */
+.wrapper{
+  display: flex;
+}
+
+/* サイドバー */
+.side-bottom{
+  height: calc(100vh - 80px);
+  width: 200px;
+  padding: 10px;
+  border: 2px solid gray;
+}
+
+/* メインスペース */
+
+
+/* メインスペース2分割 */
+.main-bottom-half{
+  height: calc(100vh - 80px);
+  width: calc((100vw - 200px) / 2);
+  padding: 10px;
+  border: 2px solid gray;
+  overflow-y: scroll;
+}

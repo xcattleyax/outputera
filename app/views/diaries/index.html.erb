@@ -1,17 +1,16 @@
 <div class="wrapper">
   <% if user_signed_in? %>
-    <div class="diary-bar">
+    <div class="side-bottom">
       <%= render "diary_bar" %>
     </div>
   <% else %>
-    <div>
-      <%= render "side_bar" %>
+    <div class="side-bottom">
     </div>
   <% end %>
-  <div class="main-space">
-    <%= render "main_space" %>
+  <div class="main-bottom-half">
+    <%= render "main_note" %>
   </div>
-  <div class="main-space-sub">
-    <%= render "main_space_sub" %>
+  <div class="main-bottom-half">
+    <%= render "main_presentation" %>
   </div>
 </div>
