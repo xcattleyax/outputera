@@ -1,23 +1,21 @@
-<div class="show-box">
-  <div class="show-note">
-    <div class="show-title">
-      <%= @note.title %>
-    </div>
-    <div class="show-category">
-      カテゴリー: <%= @note.category.name %>
-    </div>
-    <div class="show-text">
-      <%= @note.text %>
-    </div>
+<div class="show-note">
+  <div class="show-title">
+    <%= @note.title %>
   </div>
-  <% unless not user_signed_in? && @note.user_id != current_user.id %>
-    <div class="comment-box">
-      コメント
-      <%= form_with model: [@note,@comment], class:"comment-form-area", local: true do |f| %>
-        <%= f.text_field :comment, class:"comment-form" %>
-        <%= f.submit "送信", class:"button" %>
-      <% end %>
-    </div>
-  <% end %>
+  <div class="show-category">
+    カテゴリー: <%= @note.category.name %>
+  </div>
+  <div class="show-text">
+    <%= @note.text %>
+  </div>
 </div>
+<% unless not user_signed_in? && @note.user_id != current_user.id %>
+  <div class="comment-box">
+    コメント
+    <%= form_with model: [@note,@comment], class:"comment-form-area", local: true do |f| %>
+      <%= f.text_field :comment, class:"comment-form" %>
+      <%= f.submit "送信", class:"button" %>
+    <% end %>
+  </div>
+<% end %>
 

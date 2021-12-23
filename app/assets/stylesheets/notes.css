@@ -22,10 +22,6 @@
 }
 
 /* ノート詳細ページ */
-.show-box{
-  padding: 10px;
-}
-
 .show-note{
   font-size: 18px;
   text-align: center;
@@ -44,7 +40,7 @@
 
 .show-text{
   border: 1px solid black;
-  height: 60%;
+  height: calc(100vh - 350px);
   text-align: left;
   overflow-y: scroll;
   word-break: break-all;
@@ -69,9 +65,10 @@
   margin-top: 10px;
 }
 
+/* showのサイドバー */
 .note-answer-box{
   height: calc(100vh - 200px);
   border: 1px solid black;
-  margin: 10px;
-  overflow: scroll;
+  overflow-y: scroll;
+  word-break: break-all;
 }
