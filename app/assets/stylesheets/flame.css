@@ -13,7 +13,12 @@
 }
 
 /* メインスペース */
-
+.main-bottom{
+  height: calc(100vh - 80px);
+  width: calc(100vw - 200px);
+  padding: 5px;
+  border: 2px solid gray;
+}
 
 /* メインスペース2分割 */
 .main-bottom-half{

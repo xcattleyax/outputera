@@ -1,6 +1,12 @@
-.main-space-show{
-  display: flex;
+/* comments */
+.show-comment-space{
+  border: 1px solid black;
+  height: calc(100vh - 150px);
+  width: calc((100vw - 300px) / 2);
+  margin: 10px;
+  overflow: scroll;
 }
+
 
 .show-comment-box{
   font-size: 18px;
@@ -30,13 +36,5 @@
   padding: 5px;
   display: block;
   border: 1px solid black;
-  overflow: scroll;
-}
-
-.show-comment-space{
-  border: 1px solid black;
-  height: calc(100vh - 150px);
-  width: calc((100vw - 300px) / 2);
-  margin: 10px;
   overflow: scroll;
 }
