@@ -4,8 +4,8 @@
     カテゴリー検索
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"diary-category"}) %>
     <p>タイトルキーワード</p>
-    <div class="title-keyword">
-    <%= f.text_field :title%>
+    <div>
+    <%= f.text_field :title, class:"title-keyword"%>
     </div>
     <%= f.submit "検索", class:"button"%>
   <% end %>
