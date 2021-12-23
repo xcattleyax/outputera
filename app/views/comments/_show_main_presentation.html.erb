@@ -1,9 +1,11 @@
-<div class="show-comment-space">
+<div>
   <h3>プレゼンコメント一覧</h3>
+<div class="show-comment-space">
   <% @presentation_comments.each do |comment| %>
     <div>
       <%= comment.presentation.title %>
       <%= link_to "#{comment.user.name}さんから", presentation_presentation_comment_path(presentation_id: comment.presentation_id, id: comment.id)%>
     </div>
   <% end %>
+</div>
 </div>

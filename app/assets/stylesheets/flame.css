@@ -21,6 +21,12 @@
   overflow-y: scroll;
 }
 
+.main-bottom-mypage{
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;  
+}
+
 /* メインスペース2分割 */
 .main-bottom-half{
   height: calc(100vh - 80px);
