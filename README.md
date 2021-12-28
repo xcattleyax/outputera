@@ -11,7 +11,7 @@
 | 実装予定の機能       | 検索機能の作成、友達登録、チーム作成機能などを考えている     |
 | データベース設計      | [![Image from Gyazo](https://i.gyazo.com/59352962d4955851c2fbfc18fd962a31.png)](https://gyazo.com/59352962d4955851c2fbfc18fd962a31)  |
 | 画像遷移図           | [![Image from Gyazo](https://i.gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d.png)](https://gyazo.com/b3a2ba97ecf37269c5edf9a1c743358d)   |
-| 開発環境             | <dl><dt> ・フロントエンド : HTML,CSS / JavaScript </dt><dt> ・バックエンド : Ruby(ver.) / Ruby on Rails(ver) </dt><dt> ・インフラ : AWS (EC2/S3) </dt><dt> ・テスト : RSpec </dt><dt> ・テキストエディタ : Visual Studio Code </dt><dt> ・タスク管理 : GitHubプロジェクトボード </dt></dl> |
+| 開発環境             | <dl><dt> ・フロントエンド : HTML,CSS</dt><dt> ・バックエンド : Ruby(ver.6.0.0) / Ruby on Rails(ver) </dt><dt> ・インフラ : AWS (EC2/S3) </dt><dt> ・テスト : RSpec </dt><dt> ・テキストエディタ : Visual Studio Code </dt><dt> ・タスク管理 : GitHubプロジェクトボード </dt></dl> |
 | ローカルでの動作方法  |                                                    |
 
 # テーブル設計
