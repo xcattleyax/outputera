@@ -5,8 +5,7 @@
   <div class="show-category">
     カテゴリー: <%= @note.category.name %>
   </div>
-  <div class="show-text", style="white-space:pre-wrap">
-    <%= @note.text %>
+  <div class="show-text", style="white-space:pre-line"><%= @note.text %>
   </div>
 </div>
 <% unless not user_signed_in? && @note.user_id != current_user.id %>
