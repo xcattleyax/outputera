@@ -44,7 +44,11 @@ password: 123456
 </dl>
 
 # ローカルでの動作方法
-
+以下のコマンドを順に実行してください
+% git clone https://github.com/outputera
+% cd outputera
+% bundle install
+% yarn install
 # テーブル設計
 
 ## users テーブル
